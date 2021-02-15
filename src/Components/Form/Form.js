@@ -1,11 +1,16 @@
 import axios from 'axios';
 import { React, useState, useEffect } from 'react';
 import FormUI from './FormUI.js';
+import Graph from '../Graph/Graph.js';
 
 
 
-const Form = ( {getSelected, getDataType} ) => {
+const Form = () => {
     const [options, setOptions] = useState([]);
+    const [geoCode, setGeoCode] = useState(null);
+    const [dataType, setDataType] = useState(() => {
+        return {label: "Incedencia por 10,000 habitantes", value: "twoWeekRate"};
+    });
 
 
     const urlOptions = 'http://covidradarmadrid-env.eba-wbgad2ub.eu-south-1.elasticbeanstalk.com/api/names&geocodes';
@@ -29,18 +34,29 @@ const Form = ( {getSelected, getDataType} ) => {
         return optionsArray;
     }
 
-    const passUpSelected = (selected) => {
-        getSelected(selected);
-    };
+    const getDataType = (selected) => {
+        setDataType(selected);
+    }
 
-    const passUpDataType = (dataType) => {
-        console.log("Form:")
-        console.log(dataType);
-        getDataType(dataType);
-    };
+    const getGeoCode = (selected) => {
+        setGeoCode(selected);
+    }
+
 
     return(
-        <FormUI passUpSelected={getSelected} options={options} passUpDataType={getDataType} />
+        <>
+        <FormUI 
+            passUpGeoCode={getGeoCode} 
+            passUpDataType={getDataType} 
+            options={options} 
+        />
+        { geoCode !== null ?
+            <Graph 
+                geoCode={geoCode} 
+                dataChoice={dataType}
+            /> 
+        : null }
+        </>
     );
     
 }

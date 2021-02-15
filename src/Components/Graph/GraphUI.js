@@ -1,13 +1,11 @@
 import React from 'react';
 import { Bar } from "react-chartjs-2";
-import moment from 'moment';
 import { Container } from 'react-bootstrap'; 
+import GraphInfo from './GraphInfo.js';
 
-const GraphUI = ( { healthWard, dataType } ) => {
-
-    console.log("graphUI")
-    console.log(dataType);
-
+const GraphUI = ( { healthWard, dataChoice } ) => {
+    const {name, totalCases, lastUpdated} = healthWard;
+    
     const toString = (date) => {
         const year = date[0];
         var month = date[1].toString();
@@ -16,28 +14,38 @@ const GraphUI = ( { healthWard, dataType } ) => {
         month = month.length === 2 ? month : "0" + month;
         day = day.length === 2 ? day : "0" + day;
         
-        return year + "-" + month + "-" + day;
+        return day + "/" + month + "/" + year;
     };
 
     var dailyRecords = healthWard.dailyRecords;
-    console.log(dailyRecords);
 
     const labels = () => {
             const dates = dailyRecords.map(dailyRecord => { 
-                return moment(toString(dailyRecord.date));
+                return toString(dailyRecord.date)
             });
             return dates;
     };
 
     const figures = () => { 
-        return dailyRecords.map(dailyRecord => dailyRecord.twoWeekRate);
+        switch (dataChoice.value) {
+            case "twoWeekRate":
+                return dailyRecords.map(dailyRecord => dailyRecord.twoWeekRate);
+            case "totalCases":
+                return dailyRecords.map(dailyRecord => dailyRecord.totalCases);
+            case "twoWeekCases":
+                return dailyRecords.map(dailyRecord => dailyRecord.twoWeekCases);
+            default:
+                return dailyRecords.map(dailyRecord => dailyRecord.twoWeekRate);
+
+        }
+        
     };
 
 
     var data = {
         labels: labels(),
         datasets: [{
-            label: "Casos por 10,000 habitantes",
+            label: dataChoice.label,
             backgroundColor: "rgba(8, 10 ,252, 0.6)",
             hoverBackgroundColor: "rgba(3, 4, 133, 0.8)",
             data: figures(),
@@ -58,9 +66,7 @@ const GraphUI = ( { healthWard, dataType } ) => {
                 time: {
                     unit: 'day',
                     round: 'day',
-                    displayFormats: {
-                        day: 'MMM D'
-                    }
+                    format: 'DD MM YYYY' 
                 },
             gridLines: {
                 color: "rgba(0, 0, 0, 0)",
@@ -80,9 +86,15 @@ const GraphUI = ( { healthWard, dataType } ) => {
     return (
         <>
             <Container>
+                <GraphInfo 
+                    name={name}
+                    twoWeekRate={dailyRecords[dailyRecords.length - 1].twoWeekRate}
+                    totalCases={totalCases}
+                    lastUpdated={lastUpdated.toString()} 
+                />
                 <Bar
                     width={400}
-                    height={400}
+                    height={200}
                     data={data}
                     options={options}
                 />

@@ -3,21 +3,21 @@ import { Col, Container, Row } from 'react-bootstrap';
 import Select from 'react-select';
 
 
-const FormUI = ( {passUpDataType, passUpSelected, options} ) => {
+const FormUI = ( {passUpDataType, passUpGeoCode, options} ) => {
 
-    const handleChange = (selected) => {
-        passUpSelected(selected.value);
+    const handleChangeHealthWard = (healthWard) => {
+        passUpGeoCode(healthWard.value);
     };
 
-    const changeData = (dataChoice) => {
-        console.log("FormUI")
-        console.log(dataChoice);
-        passUpDataType(dataChoice);
-    };
+    const handleChangeDataType = (dataType) => {
+        passUpDataType(dataType);
+    }
+
 
     const dataOptions = [
-        {label: "Casos por 10,000 habitantes", value: "twoWeekRate"},
-        {label: "Casos Totales", value: "casesTotal"}
+        {label: "Incedencia por 10,000 habitantes (ultimos 14 días)", value: "twoWeekRate"},
+        {label: "Casos Totales", value: "totalCases"},
+        {label: "Casos actuales (ultimos 14 días)", value: "twoWeekCases"}
     ];
 
     return (
@@ -26,8 +26,9 @@ const FormUI = ( {passUpDataType, passUpSelected, options} ) => {
             <Row>
                 <Col>
                     <Select
+                        name = "Healthward"
                         options={options}
-                        onChange={ (selected) => handleChange(selected)}
+                        onChange={ (selected) => handleChangeHealthWard(selected)}
                         autoFocus
                         placeholder="Zona Basica de Salud"
                         isSearchable
@@ -35,9 +36,10 @@ const FormUI = ( {passUpDataType, passUpSelected, options} ) => {
                 </Col>
                 <Col>
                     <Select
+                        name = "dataType"
                         options={dataOptions}
-                        onChange={ (dataChoice) => changeData(dataChoice)}
                         placeholder="Datos"
+                        onChange={ (selected) => handleChangeDataType(selected)}
                     />
                 </Col>
             </Row>
