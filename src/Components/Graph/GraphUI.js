@@ -4,7 +4,6 @@ import { Container } from 'react-bootstrap';
 import GraphInfo from './GraphInfo.js';
 
 const GraphUI = ( { healthWard, dataChoice } ) => {
-    const {name, totalCases, lastUpdated} = healthWard;
     
     const toString = (date) => {
         const year = date[0];
@@ -34,6 +33,8 @@ const GraphUI = ( { healthWard, dataChoice } ) => {
                 return dailyRecords.map(dailyRecord => dailyRecord.totalCases);
             case "twoWeekCases":
                 return dailyRecords.map(dailyRecord => dailyRecord.twoWeekCases);
+            case "totalRate":
+                return dailyRecords.map(dailyRecord => dailyRecord.totalRate);    
             default:
                 return dailyRecords.map(dailyRecord => dailyRecord.twoWeekRate);
 
@@ -46,8 +47,8 @@ const GraphUI = ( { healthWard, dataChoice } ) => {
         labels: labels(),
         datasets: [{
             label: dataChoice.label,
-            backgroundColor: "rgba(8, 10 ,252, 0.6)",
-            hoverBackgroundColor: "rgba(3, 4, 133, 0.8)",
+            backgroundColor: "rgba(51, 129, 255, 0.5)",
+            hoverBackgroundColor: "rgba(51, 129, 255, 1)",
             data: figures(),
             barThickness: "flex",
             categoryPercentage: 1.0,
@@ -58,15 +59,16 @@ const GraphUI = ( { healthWard, dataChoice } ) => {
     
     
     var options = {
-        maintainAspectRatio: false,
+        maintainAspectRatio: true,
         responsive: true,
+        aspectRatio: 1.4,
         scales: {
             xAxes: [{
                 type: "time",
                 time: {
                     unit: 'day',
                     round: 'day',
-                    format: 'DD MM YYYY' 
+                    parser: 'DD MM YYYY' 
                 },
             gridLines: {
                 color: "rgba(0, 0, 0, 0)",
@@ -87,14 +89,9 @@ const GraphUI = ( { healthWard, dataChoice } ) => {
         <>
             <Container>
                 <GraphInfo 
-                    name={name}
-                    twoWeekRate={dailyRecords[dailyRecords.length - 1].twoWeekRate}
-                    totalCases={totalCases}
-                    lastUpdated={lastUpdated.toString()} 
+                    healthWard={healthWard} 
                 />
                 <Bar
-                    width={400}
-                    height={200}
                     data={data}
                     options={options}
                 />

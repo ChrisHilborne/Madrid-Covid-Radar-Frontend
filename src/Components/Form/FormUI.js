@@ -15,7 +15,8 @@ const FormUI = ( {passUpDataType, passUpGeoCode, options} ) => {
 
 
     const dataOptions = [
-        {label: "Incedencia por 10,000 habitantes (ultimos 14 días)", value: "twoWeekRate"},
+        {label: "Incedencia por 100,000 habitantes (ultimos 14 días)", value: "twoWeekRate"},
+        {label: "Incedencia por 100,000 habitantes (total)", value: "totalRate"},
         {label: "Casos Totales", value: "totalCases"},
         {label: "Casos actuales (ultimos 14 días)", value: "twoWeekCases"}
     ];

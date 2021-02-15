@@ -3,7 +3,10 @@ import { Container, Row, Col } from 'react-bootstrap';
 import moment from 'moment';
 import 'moment/locale/es'
 
-const GraphInfo = ( {name, twoWeekRate, totalCases, lastUpdated} ) => {
+const GraphInfo = ( healthWard ) => {
+    const { name, lastUpdated, totalCases, dailyRecords, recordCount} = healthWard.healthWard;
+
+    var actualCases = dailyRecords[recordCount - 1].twoWeekCases;
     
     const formatDate = (lastUpdated) => {
         moment.locale('es-en');
@@ -13,23 +16,23 @@ const GraphInfo = ( {name, twoWeekRate, totalCases, lastUpdated} ) => {
 
     return(
         <>
-            <Container className="mt-4">
+            <Container className="mt-3">
                 <Row>
                     <Col>
-                        <h4>Zona: </h4> 
-                        <h5>{name}</h5>
+                        <h5>Zona: </h5> 
+                        <h6>{name}</h6>
+                    </Col>
+                    <Col sm>
+                        <h5>Casos actuales: </h5> 
+                        <h6>{actualCases}</h6>
                     </Col>
                     <Col>
-                        <h4>Incedencia actual: </h4> 
-                        <h5>{twoWeekRate}</h5>
+                        <h5>Casos Totales:</h5>
+                        <h6>{totalCases}</h6>
                     </Col>
                     <Col>
-                        <h4>Casos Totales:</h4>
-                        <h5>{totalCases}</h5>
-                    </Col>
-                    <Col>
-                        <h4>Ultima fecha de datos:</h4> 
-                        <h5>{formatDate(lastUpdated)}</h5>
+                        <h5>Ultima fecha de datos:</h5> 
+                        <h6>{formatDate(lastUpdated)}</h6>
                     </Col>
                 </Row>
             </Container>

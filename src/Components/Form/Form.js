@@ -9,7 +9,7 @@ const Form = () => {
     const [options, setOptions] = useState([]);
     const [geoCode, setGeoCode] = useState(null);
     const [dataType, setDataType] = useState(() => {
-        return {label: "Incedencia por 10,000 habitantes", value: "twoWeekRate"};
+        return {label: "Incedencia por 100,000 habitantes (ultimos 14 días)", value: "twoWeekRate"};
     });
 
 

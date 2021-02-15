@@ -8,7 +8,6 @@ const Graph = ( { geoCode, dataChoice } ) => {
     const url = 'http://covidradarmadrid-env.eba-wbgad2ub.eu-south-1.elasticbeanstalk.com/api/geocode/';
 
     useEffect(() => {
-        console.log(geoCode);
         const getData = (geoCode) => {
             axios.get(url.concat(geoCode))
                 .then( response => {
