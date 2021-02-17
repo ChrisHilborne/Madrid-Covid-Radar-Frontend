@@ -22,13 +22,13 @@ const ContactPage = () => {
         <Container className="contact-container">
             <Form onSubmit={sendEmail}>
                 <Form.Group controlId="formBasicEmail">
-                    <Form.Control type="email" placeholder="Correo Electronico" />
+                    <Form.Control type="email" placeholder="Correo Electronico" name="email"/>
                 </Form.Group>
                 <Form.Group controlId="formBasicEmailSubject">
-                    <Form.Control type="text" placeholder="Asunto" />
+                    <Form.Control type="text" placeholder="Asunto" name="subject"/>
                 </Form.Group>
                 <Form.Group controlId="formBasicEmailText">
-                    <Form.Control as="textarea" rows={4} placeholder="Mensaje" />
+                    <Form.Control as="textarea" rows={4} placeholder="Mensaje" name="message" />
                 </Form.Group>
                 <Button variant="primary" type="submit">Enviar</Button>
             </Form>
