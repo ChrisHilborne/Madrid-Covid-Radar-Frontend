@@ -16,7 +16,7 @@ const GraphInfo = ( healthWard ) => {
 
     return(
         <>
-            <Container className="mt-3">
+            <Container>
                 <Row>
                     <Col sm={6} md={3} xs={6}>
                         <h5>Zona: </h5> 

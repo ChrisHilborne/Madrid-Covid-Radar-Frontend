@@ -19,7 +19,7 @@ const ContactPage = () => {
 
     return (
         <>
-        <Container className="contact-container">
+        <Container fluid="md" className="contact-container">
             <Form onSubmit={sendEmail}>
                 <Form.Group controlId="formBasicEmail">
                     <Form.Control type="email" placeholder="Correo Electronico" name="email"/>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Form } from 'react-bootstrap';
 import Select from 'react-select';
 
 
@@ -23,9 +23,9 @@ const FormUI = ( {passUpDataType, passUpGeoCode, options} ) => {
 
     return (
         
-        <Container>
-            <Row>
-                <Col>
+        <Container fluid="md">
+            <Form.Row>
+                <Col className="mb-3" xs={12} sm={12} md={12} lg={6} xl={6}>
                     <Select
                         name = "Healthward"
                         options={options}
@@ -35,7 +35,7 @@ const FormUI = ( {passUpDataType, passUpGeoCode, options} ) => {
                         isSearchable
                     />
                 </Col>
-                <Col>
+                <Col className="mb-3" xs={12} sm={12} md={12} lg={6} xl={6}>
                     <Select
                         name = "dataType"
                         options={dataOptions}
@@ -43,7 +43,7 @@ const FormUI = ( {passUpDataType, passUpGeoCode, options} ) => {
                         onChange={ (selected) => handleChangeDataType(selected)}
                     />
                 </Col>
-            </Row>
+            </ Form.Row>
         </Container>
     )
 }

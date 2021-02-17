@@ -4,8 +4,8 @@ import { Container, Navbar , Nav } from 'react-bootstrap';
 const NavBar = () => {
     return(
         <>
-        <Container fixed="top" >
-            <Navbar className="navbar d-flex align-items-start" variant="dark" expand="md">
+        <Container fluid="md" >
+            <Navbar variant="dark" expand="md">
                 <Navbar.Brand href="/">Covid Radar Madrid</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">

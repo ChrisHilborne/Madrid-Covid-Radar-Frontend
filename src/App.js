@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.scss';
+import './scss/main.scss';
+import './styles/styles.css'
 import MainPage from "./Pages/MainPage";
 import InfoPage from "./Pages/InfoPage";
 import ContactPage from "./Pages/ContactPage"

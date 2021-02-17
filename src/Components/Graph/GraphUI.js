@@ -87,7 +87,7 @@ const GraphUI = ( { healthWard, dataChoice } ) => {
 
     return (
         <>
-            <Container>
+            <Container fluid="md">
                 <GraphInfo 
                     healthWard={healthWard} 
                 />
