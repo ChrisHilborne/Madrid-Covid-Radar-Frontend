@@ -1,9 +1,11 @@
 import { React, useState, useEffect } from "react";
 import GraphUI from './GraphUI.js';
 import axios from 'axios';
+import LoadingSpinner from '../LoadingSpinner.js';
 
 const Graph = ( { geoCode, dataChoice } ) => {
     const [healthWard, setHealthWard] = useState(null);
+    
 
     const url = 'http://covidradarmadrid-env.eba-wbgad2ub.eu-south-1.elasticbeanstalk.com/api/geocode/';
 
@@ -24,7 +26,9 @@ const Graph = ( { geoCode, dataChoice } ) => {
                 <GraphUI 
                     healthWard={healthWard} 
                     dataChoice={dataChoice}
-                /> : null }
+                /> 
+                : 
+                <LoadingSpinner /> }
             </> 
         );
 

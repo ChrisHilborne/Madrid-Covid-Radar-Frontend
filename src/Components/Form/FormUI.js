@@ -1,9 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Col, Container, Form } from 'react-bootstrap';
 import Select from 'react-select';
 
 
 const FormUI = ( {passUpDataType, passUpGeoCode, options} ) => {
+    const { t } = useTranslation();
+
 
     const handleChangeHealthWard = (healthWard) => {
         passUpGeoCode(healthWard.value);
@@ -15,31 +18,32 @@ const FormUI = ( {passUpDataType, passUpGeoCode, options} ) => {
 
 
     const dataOptions = [
-        {label: "Incedencia por 100,000 habitantes (ultimos 14 días)", value: "twoWeekRate"},
-        {label: "Incedencia por 100,000 habitantes (total)", value: "totalRate"},
-        {label: "Casos Totales", value: "totalCases"},
-        {label: "Casos actuales (ultimos 14 días)", value: "twoWeekCases"}
+        {label: t('formUI.dataOption1'), value: "twoWeekRate"},
+        {label: t('formUI.dataOption2'), value: "totalRate"},
+        {label: t('formUI.dataOption3'), value: "totalCases"},
+        {label: t('formUI.dataOption4'), value: "twoWeekCases"}
     ];
 
     return (
         
         <Container fluid="md">
+            
             <Form.Row>
                 <Col className="mb-3" xs={12} sm={12} md={12} lg={6} xl={6}>
                     <Select
-                        name = "Healthward"
+                        name="healthWard"
                         options={options}
                         onChange={ (selected) => handleChangeHealthWard(selected)}
                         autoFocus
-                        placeholder="Zona Basica de Salud"
+                        placeholder={t('formUI.healthWard')}
                         isSearchable
                     />
                 </Col>
                 <Col className="mb-3" xs={12} sm={12} md={12} lg={6} xl={6}>
                     <Select
-                        name = "dataType"
+                        name="data" 
                         options={dataOptions}
-                        placeholder="Datos"
+                        placeholder={t('formUI.data')}
                         onChange={ (selected) => handleChangeDataType(selected)}
                     />
                 </Col>

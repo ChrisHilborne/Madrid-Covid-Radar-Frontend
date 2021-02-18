@@ -1,0 +1,33 @@
+{
+    "locale" : "es",
+
+    "formUI": {
+        "healthWard": "Zona Basica de Salud",
+        "data": "Cifras",
+        "dataOption1": "Incedencia por 100,000 habitantes (ultimos 14 días)",
+        "dataOption2": "Incedencia por 100,000 habitantes (total)",
+        "dataOption3": "Casos Totales",
+        "dataOption4": "Casos actuales (ultimos 14 días)"
+    
+    },
+
+    "navbar": {
+        "info": "Info",
+        "contact": "Contacto"
+    },
+
+    "graphInfo": {
+        "name": "Zona",
+        "actualCases": "Casos Actuales",
+        "totalCases": "Casos Totales",
+        "lastUpdated": "Ultima fecha de datos" 
+    },
+
+    "contact": {
+        "email": "Correo Electronico",
+        "subject": "Asunto",
+        "message": "Mensaje",
+        "success": "Gracias! Nos ponemos en contacto contigo pronto!",
+        "send": "Enviar"
+    }
+}

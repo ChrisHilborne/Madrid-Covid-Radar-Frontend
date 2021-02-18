@@ -2,8 +2,14 @@ import React from 'react';
 import { Bar } from "react-chartjs-2";
 import { Container } from 'react-bootstrap'; 
 import GraphInfo from './GraphInfo.js';
+import { useTranslation } from 'react-i18next';
 
 const GraphUI = ( { healthWard, dataChoice } ) => {
+    const { t } = useTranslation();
+
+    const dataLabel = (dataChoice) =>{
+        return dataChoice === null ? t('formUI.dataOption1') : dataChoice.label;
+    }
     
     const toString = (date) => {
         const year = date[0];
@@ -26,6 +32,9 @@ const GraphUI = ( { healthWard, dataChoice } ) => {
     };
 
     const figures = () => { 
+        if (dataChoice === null) {
+            return dailyRecords.map(dailyRecord => dailyRecord.twoWeekRate);
+        }
         switch (dataChoice.value) {
             case "twoWeekRate":
                 return dailyRecords.map(dailyRecord => dailyRecord.twoWeekRate);
@@ -46,7 +55,7 @@ const GraphUI = ( { healthWard, dataChoice } ) => {
     var data = {
         labels: labels(),
         datasets: [{
-            label: dataChoice.label,
+            label:  {dataLabel},
             backgroundColor: "rgba(51, 129, 255, 0.5)",
             hoverBackgroundColor: "rgba(51, 129, 255, 1)",
             data: figures(),
@@ -59,6 +68,7 @@ const GraphUI = ( { healthWard, dataChoice } ) => {
     
     
     var options = {
+        locale: t('locale'),
         maintainAspectRatio: true,
         responsive: true,
         aspectRatio: 1.4,

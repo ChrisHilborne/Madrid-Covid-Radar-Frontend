@@ -8,9 +8,7 @@ import Graph from '../Graph/Graph.js';
 const Form = () => {
     const [options, setOptions] = useState([]);
     const [geoCode, setGeoCode] = useState(null);
-    const [dataType, setDataType] = useState(() => {
-        return {label: "Incedencia por 100,000 habitantes (ultimos 14 días)", value: "twoWeekRate"};
-    });
+    const [dataType, setDataType] = useState(null);
 
 
     const urlOptions = 'http://covidradarmadrid-env.eba-wbgad2ub.eu-south-1.elasticbeanstalk.com/api/names&geocodes';

@@ -1,0 +1,34 @@
+{
+    "locale" : "en",
+
+    "formUI": {
+        "healthWard": "Health Ward",
+        "data": "Figures",
+        "dataOption1": "Infection Rate per 100,000 people (last two weeks)",
+        "dataOption2": "Total Infection Rate per 100,00 people", 
+        "dataOption3": "Total Cases", 
+        "dataOption4": "Cases (last two weeks)"
+    },
+
+    "navbar": {
+        "info": "About",
+        "contact": "Contact"
+    },
+
+    "graphInfo": {
+        "name": "Area",
+        "actualCases": "Cases",
+        "totalCases": "Total Cases",
+        "lastUpdated": "Last updated" 
+    },
+
+    "contact": {
+        "email": "Email Address",
+        "subject": "Subject",
+        "message": "Message",
+        "success": "Thanks! We'll be in touch soon!",
+        "send": "Send"
+    }
+
+    
+}

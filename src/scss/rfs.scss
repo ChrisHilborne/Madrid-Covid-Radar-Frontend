@@ -2,8 +2,6 @@
 @import "../../node_modules/rfs/scss";
 
 
-// $enable-rfs: false;
-
 // Base value
 $rfs-base-value: 1.25rem !default;
 $rfs-unit: rem !default;
@@ -21,7 +19,7 @@ $rfs-breakpoint-unit: px !default;
 }
 
 // Resize values based on screen height and width
-$rfs-two-dimensional: false !default;
+$rfs-two-dimensional: true;
 
 // Factor of decrease
 $rfs-factor: 10 !default;
@@ -313,29 +311,4 @@ html{
             box-sizing: inherit;
 }
 
-body {
-    margin: 20px 0;
-    padding: 0;
-    line-height: 1;
-    font-family: 'Roboto', sans-serif;
-    color: #202020;
-    background-color: #fbfbfb;
-}
 
-h5 {
-    font-weight: 300;
-    color: darkslategray;
-}
-
-h6 {
-    color:lightslategray;
-}
-
-.navbar {
-    background-color: rgba(51, 129, 255, 0.8);
-    margin-bottom: 20px;
-}
-
-.contact-container {
-    width: 60% !important;
-}
