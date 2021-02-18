@@ -11,7 +11,7 @@ const NavBar = () => {
 
     return(
         <>
-        <Container>
+        <Container fluid>
                 <Navbar variant="dark" expand="md">
                 <Navbar.Brand href="/">Covid Radar Madrid</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />

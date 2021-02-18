@@ -29,5 +29,12 @@
         "message": "Mensaje",
         "success": "Gracias! Nos ponemos en contacto contigo pronto!",
         "send": "Enviar"
+    },
+
+    "cookieWarning": {
+        "consent": "Aceptar Cookies",
+        "settings": "Ajustar Configuración",
+        "text": "Esta página usa cookies para mejorar la experiencia del usario. Para leer la política de cookies haz clic ",
+        "here": "aquí."
     }
 }

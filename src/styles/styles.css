@@ -33,3 +33,7 @@ h6 {
     background: whitesmoke;
     color: darkslategray
 }
+
+.trim {
+    display: inline-block
+}

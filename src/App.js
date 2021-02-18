@@ -16,7 +16,7 @@ import ContactPage from "./Pages/ContactPage"
 // components
 import NavBar from "./Components/NavBar"
 import LoadingSpinner from './Components/LoadingSpinner';
-import CookieConsent from "react-cookie-consent";
+import CookieWarning from "./Components/CookieWarning";
 
 
 // router
@@ -36,17 +36,7 @@ function App() {
           <Route path ="/contact" component={ContactPage} />
         </Switch>
       </Router>
-      <CookieConsent 
-        disableStyles
-        containerClasses="shadow cookie-warning fixed-bottom col-lg-12 border rounded p-2"  
-        buttonText="Accept"
-        buttonClasses="btn btn-primary"
-        enableDeclineButton
-        declineButtonClasses="btn btn-secondary"
-        declineButtonText="Adjust Settings"
-      >
-        This website uses cookies to enhance the user experience. To read our cookie policy click <a href="/contact">here</a>
-      </ CookieConsent>
+      <CookieWarning />
     </Suspense>
     </>
   );

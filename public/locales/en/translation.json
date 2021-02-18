@@ -28,6 +28,13 @@
         "message": "Message",
         "success": "Thanks! We'll be in touch soon!",
         "send": "Send"
+    },
+
+    "cookieWarning": {
+        "consent": "Accept Cookies",
+        "settings": "Adjust Settings",
+        "text": "This website uses cookies to enhance the user experience. To read our cookie policy click ",
+        "here": "here."
     }
 
     
