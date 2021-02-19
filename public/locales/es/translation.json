@@ -13,7 +13,9 @@
 
     "navbar": {
         "info": "Info",
-        "contact": "Contacto"
+        "contact": "Contacto",
+        "privacy": "Política de Privacidad",
+        "cookies": "Política de Cookies"
     },
 
     "graphInfo": {

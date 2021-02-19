@@ -71,7 +71,7 @@ const GraphUI = ( { healthWard, dataChoice } ) => {
         locale: t('locale'),
         maintainAspectRatio: true,
         responsive: true,
-        aspectRatio: 1.4,
+        aspectRatio: 1.2,
         scales: {
             xAxes: [{
                 type: "time",
@@ -97,7 +97,7 @@ const GraphUI = ( { healthWard, dataChoice } ) => {
 
     return (
         <>
-            <Container fluid="md">
+            <Container fluid="md" className="mb-2">
                 <GraphInfo 
                     healthWard={healthWard} 
                 />

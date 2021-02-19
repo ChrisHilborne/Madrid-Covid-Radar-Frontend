@@ -1,0 +1,52 @@
+h5 {
+    font-weight: 300;
+    color: darkslategray;
+}
+
+h6 {
+    color:lightslategray;
+}
+
+.navbar {
+    background-color: rgba(36, 70, 240, 1);
+    margin-bottom: 20px;
+}
+
+.footer {
+    background-color: rgba(36, 70, 240, 1);
+    color: white;
+    position: relative;
+    bottom: 0;
+    max-height: 8vh;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content-wrap {
+    flex: 1;
+}
+
+.contact-form {
+    width: 80%;
+}
+
+.on-top {
+    z-index: 9;
+}
+
+.cookie-warning {
+    background: whitesmoke;
+    color: darkslategray
+}
+
+.trim {
+    display: inline-block
+}
+
+.small-link {
+    font-size: 10px;
+}

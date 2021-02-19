@@ -3,6 +3,13 @@ import ReactDOM from 'react-dom';
 import App from './App.js';
 import './i18n';
 
+// bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+// local styles
+import './scss/rfs.scss';
+import './styles/rfs.css'
+import './styles/app.css';
 
 ReactDOM.render(
   <React.StrictMode>

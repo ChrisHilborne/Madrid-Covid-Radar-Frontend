@@ -5,17 +5,16 @@ import { useTranslation } from 'react-i18next';
 const NavBar = () => {
     const { t, i18n } = useTranslation();
 
-    const changeLanguage = (language) => {
-        i18n.changeLanguage(language);
-    };
+    const changeLanguage = (lang) => {
+        i18n.changeLanguage(lang);
+    }
 
     return(
         <>
-        <Container fluid>
-                <Navbar variant="dark" expand="md">
+            <Navbar className="container fluid" variant="dark" expand="md">
                 <Navbar.Brand href="/">Covid Radar Madrid</Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                <Navbar.Collapse id="responsive-navbar-nav">
+                <Navbar.Toggle />
+                <Navbar.Collapse >
                     <Nav className="mr-auto">
                         <Nav.Link href="info">{t("navbar.info")}</Nav.Link>
                         <Nav.Link href="contact">{t("navbar.contact")}</Nav.Link>
@@ -26,7 +25,6 @@ const NavBar = () => {
                     <Button variant="link" onClick={() => changeLanguage("en")}>EN</Button>
                 </Nav>
             </Navbar>
-        </Container>
         </>
     );
 }
