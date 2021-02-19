@@ -12,7 +12,9 @@
 
     "navbar": {
         "info": "About",
-        "contact": "Contact"
+        "contact": "Contact",
+        "privacy": "Privacy Policy",
+        "cookies": "Cookie Policy"
     },
 
     "graphInfo": {

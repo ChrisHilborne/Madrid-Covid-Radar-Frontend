@@ -302,13 +302,6 @@ $rfs-mq-property-height: if($rfs-mode == max-media-query, max-height, min-height
   @include rfs($value, margin-left);
 }
 
-html{
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-}
-*, *:before, *:after {
-    -webkit-box-sizing: inherit;
-            box-sizing: inherit;
-}
+
 
 

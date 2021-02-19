@@ -1,4 +1,5 @@
 import React, { Suspense } from 'react';
+import {Container} from 'react-bootstrap';
 
 // local bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -14,9 +15,10 @@ import InfoPage from "./Pages/InfoPage";
 import ContactPage from "./Pages/ContactPage"
 
 // components
-import NavBar from "./Components/NavBar"
+import NavBarTop from "./Components/Nav/NavBarTop";
+import NavBarBottom from "./Components/Nav/NavBarBottom";
 import LoadingSpinner from './Components/LoadingSpinner';
-import CookieWarning from "./Components/CookieWarning";
+import CookieWarning from "./Components/Cookies/CookieWarning";
 
 
 // router
@@ -29,7 +31,8 @@ function App() {
       fallback={<LoadingSpinner />}
     >
       <Router>
-        <NavBar/>
+        <NavBarTop/>
+        <NavBarBottom/>
         <Switch>
           <Route path="/" exact component={MainPage} />
           <Route path="/info" component={InfoPage}/>
@@ -37,6 +40,7 @@ function App() {
         </Switch>
       </Router>
       <CookieWarning />
+      
     </Suspense>
     </>
   );
