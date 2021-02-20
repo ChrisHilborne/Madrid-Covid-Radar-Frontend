@@ -1,0 +1,53 @@
+html{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+}
+
+body {
+    padding: 0;
+    line-height: 1;
+    font-family: 'Roboto', sans-serif;
+    color: #202020;
+    background-color: #fbfbfb;
+    margin-bottom: 80px;
+    margin-top: 80px;
+}
+
+h5 {
+    font-weight: 300;
+    color: darkslategray;
+}
+
+h6 {
+    color:lightslategray;
+}
+
+.navbar {
+    background-color: rgba(36, 70, 240, 1);
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    width: 80%;
+}
+
+.on-top {
+    z-index: 9;
+}
+
+.cookie-warning {
+    background: whitesmoke;
+    color: darkslategray
+}
+
+.trim {
+    display: inline-block
+}
+
+.small-link {
+    font-size: 10px;
+}

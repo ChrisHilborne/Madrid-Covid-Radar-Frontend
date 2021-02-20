@@ -1,8 +1,8 @@
 import React from 'react';
-import { Button, Container, Navbar , Nav } from 'react-bootstrap';
+import { Button, Navbar , Nav } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
-const NavBar = () => {
+const NavBarTop = () => {
     const { t, i18n } = useTranslation();
 
     const changeLanguage = (lang) => {
@@ -29,4 +29,4 @@ const NavBar = () => {
     );
 }
 
-export default NavBar
+export default NavBarTop
