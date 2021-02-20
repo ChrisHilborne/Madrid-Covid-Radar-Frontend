@@ -2,22 +2,25 @@ import { React, useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
-const CookieSettings = () => {
+const PrivacyPolicy = ( {disablePrivacyPolicy} ) => {
         const [show, setShow] = useState(true);
       
-        const handleClose = () => setShow(false);
+        const handleClose = () => {
+          setShow(false);
+          disablePrivacyPolicy();
+        };
       
         return (
           <>
             <Modal
               size="lg" 
               show={show} 
-              onHide={handleClose}
+              onHide={handleClose} 
             >
               <Modal.Header closeButton>
-                <Modal.Title>Adjust Cookie Settings</Modal.Title>
+                <Modal.Title>Privacy Policy</Modal.Title>
               </Modal.Header>
-              <Modal.Body>This is where we tell the user how to change their cookie settings in their browser.</Modal.Body>
+              <Modal.Body>PRIVACY POLICY</Modal.Body>
               <Modal.Footer>
                 <Button variant="secondary" onClick={handleClose}>
                   Close
@@ -28,5 +31,4 @@ const CookieSettings = () => {
         );
 }
 
-export default CookieSettings
-    
+export default PrivacyPolicy

@@ -7,8 +7,8 @@ import ContactPage from "./Pages/ContactPage"
 
 // components
 import NavBar from "./Components/Nav/NavBar";
-import Footer from "./Components/Nav/Footer";
-import LoadingSpinner from './Components/LoadingSpinner';
+import Footer from "./Components/Footer";
+import LoadingSpinner from "./Components/LoadingSpinner";
 import CookieWarning from "./Components/Cookies/CookieWarning";
 
 
