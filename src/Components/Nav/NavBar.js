@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Navbar , Nav } from 'react-bootstrap';
+import { Breadcrumb, Navbar , Nav } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
 const NavBarTop = () => {
@@ -21,8 +21,10 @@ const NavBarTop = () => {
                     </Nav>
                 </Navbar.Collapse>
                 <Nav className="ml-auto">
-                    <Button variant="link" onClick={() => changeLanguage("es")}>ES</Button>
-                    <Button variant="link" onClick={() => changeLanguage("en")}>EN</Button>
+                    <Breadcrumb className="breadcrumb-cont align-items-center">
+                        <Breadcrumb.Item className="breadcrumb-item" onClick={() => changeLanguage("es")}>ES</Breadcrumb.Item>
+                        <Breadcrumb.Item className="breadcrumb-item" onClick={() => changeLanguage("en")}>EN</Breadcrumb.Item>
+                    </Breadcrumb>
                 </Nav>
             </Navbar>
         </>

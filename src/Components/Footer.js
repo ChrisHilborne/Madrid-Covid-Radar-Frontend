@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { React, useState, useEffect } from 'react';
 import { Navbar , Nav } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
@@ -11,17 +11,18 @@ const Footer = () => {
     const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false);
     const { t } = useTranslation();
 
+
     const disableCookiePolicy = () => {
         setShowCookiePolicy(false);
-    }
+    };
 
     const disablePrivacyPolicy = () => {
         setShowPrivacyPolicy(false);
-    }
+    };
 
     return(
         <>
-        <div className="footer container fluid mt-2">
+        <div className="footer container fluid mt-2  align-items-middle">
         <Navbar variant="dark" >
             <Nav className="ml-auto">
                 <Nav.Link className="smallLink" onClick={() => setShowPrivacyPolicy(true)} >{t("navbar.privacy")}</Nav.Link>

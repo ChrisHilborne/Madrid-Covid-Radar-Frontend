@@ -50,3 +50,23 @@ h6 {
 .small-link {
     font-size: 10px;
 }
+
+.breadcrumb-cont {
+    height: 64px;
+    line-height: 42px;
+    text-align: center;
+    align-content: center;
+}
+
+.breadcrumb {
+    background-color: rgba(36, 70, 240, 1);
+    color: white;
+}
+
+.link {
+    color: #007bff;
+}
+
+a {
+    color: rgba(255,255,255,.5);
+}
