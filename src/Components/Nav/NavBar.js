@@ -11,7 +11,7 @@ const NavBarTop = () => {
 
     return(
         <>
-            <Navbar className="container fluid" variant="dark" expand="md">
+            <Navbar className="container fluid rounded-bottom" variant="dark" expand="md">
                 <Navbar.Brand href="/">Covid Radar Madrid</Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse >

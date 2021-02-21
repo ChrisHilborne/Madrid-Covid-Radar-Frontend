@@ -22,7 +22,7 @@ const Footer = () => {
 
     return(
         <>
-        <div className="footer container fluid mt-2  align-items-middle">
+        <div className="footer container fluid mt-2 align-items-middle rounded-top">
         <Navbar variant="dark" >
             <Nav className="ml-auto">
                 <Nav.Link className="smallLink" onClick={() => setShowPrivacyPolicy(true)} >{t("navbar.privacy")}</Nav.Link>
