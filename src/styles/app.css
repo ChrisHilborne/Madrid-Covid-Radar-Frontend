@@ -68,7 +68,7 @@ p {
     font-size: 10px;
 }
 
-.breadcrumb-cont {
+.changelang-navbar {
     height: 64px;
     line-height: 42px;
     text-align: center;
@@ -87,6 +87,10 @@ p {
 
 .text-link {
     color: #007bff;
+}
+
+.text-link:hover {
+    color: rgba(36, 70, 240, 1);
 }
 
 a {

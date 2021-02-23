@@ -27,7 +27,7 @@ const CookieWarning = () => {
             declineButtonText={t('cookieWarning.settings')}
             
         >
-        {t('cookieWarning.text')} <a className="link" role="button" href="#" onClick={() => {setShowCookiePolicy(true)}}>{t('cookieWarning.here')}</a>
+        {t('cookieWarning.text')} <a className="text-link" role="button" href="#" onClick={() => {setShowCookiePolicy(true)}}>{t('cookieWarning.here')}</a>
         </ CookieConsent>
         {showCookiePolicy ? <CookiePolicy disableCookiePolicy={disableCookiePolicy}/> : null}
     </>

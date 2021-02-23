@@ -1,13 +1,10 @@
 import React from 'react';
-import { Breadcrumb, Navbar , Nav } from 'react-bootstrap';
+import { Navbar , Nav } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
+import ChangeLang from '../ChangeLang';
 
 const NavBarTop = () => {
-    const { t, i18n } = useTranslation();
-
-    const changeLanguage = (lang) => {
-        i18n.changeLanguage(lang);
-    }
+    const { t } = useTranslation();
 
     return(
         <>
@@ -21,10 +18,7 @@ const NavBarTop = () => {
                     </Nav>
                 </Navbar.Collapse>
                 <Nav className="ml-auto">
-                    <Breadcrumb className="breadcrumb-cont align-items-center">
-                        <Breadcrumb.Item onClick={() => changeLanguage("es")}>ES</Breadcrumb.Item>
-                        <Breadcrumb.Item onClick={() => changeLanguage("en")}>EN</Breadcrumb.Item>
-                    </Breadcrumb>
+                    <ChangeLang className="changelang-navbar align-items-center" />
                 </Nav>
             </Navbar>
         </>
