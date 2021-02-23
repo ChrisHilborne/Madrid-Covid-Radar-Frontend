@@ -1,26 +1,25 @@
 import { React, useState } from 'react';
-import { Modal, Button } from 'react-bootstrap';
+import { Modal, Button, ListGroup } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
-const PrivacyPolicy = ( {disablePrivacyPolicy} ) => {
+const InfoModal = ( {title, body} ) => {
         const [show, setShow] = useState(true);
-      
-        const handleClose = () => {
-          setShow(false);
-          disablePrivacyPolicy();
-        };
+        const { t } = useTranslation('cookie_settings');
+        const handleClose = () => setShow(false);
       
         return (
           <>
             <Modal
               size="lg" 
               show={show} 
-              onHide={handleClose} 
+              onHide={handleClose}
             >
               <Modal.Header closeButton>
-                <Modal.Title>Privacy Policy</Modal.Title>
+                <Modal.Title>{title}</Modal.Title>
               </Modal.Header>
-              <Modal.Body>PRIVACY POLICY</Modal.Body>
+              <Modal.Body>
+                {body}
+              </Modal.Body>
               <Modal.Footer>
                 <Button variant="secondary" onClick={handleClose}>
                   Close
@@ -31,4 +30,5 @@ const PrivacyPolicy = ( {disablePrivacyPolicy} ) => {
         );
 }
 
-export default PrivacyPolicy
+export default InfoModal
+    

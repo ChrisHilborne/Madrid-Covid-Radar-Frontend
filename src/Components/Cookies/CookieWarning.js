@@ -1,11 +1,10 @@
 import { React, useState } from 'react';
 import CookieConsent from 'react-cookie-consent';
 import { useTranslation } from 'react-i18next';
-import CookieSettings from './CookieSettings';
+import InfoModal from '../InfoModal';
 import CookiePolicy from './CookiePolicy'
 
 const CookieWarning = () => {
-    const [showSettings, setShowSettings] = useState(false);
     const [showCookiePolicy, setShowCookiePolicy] = useState(false);
     const { t } = useTranslation(); 
 
@@ -26,11 +25,10 @@ const CookieWarning = () => {
             enableDeclineButton
             declineButtonClasses="text-sm btn btn-secondary btn-sm m-1"
             declineButtonText={t('cookieWarning.settings')}
-            onDecline= {() => setShowSettings(true)}
+            
         >
         {t('cookieWarning.text')} <a className="link" role="button" href="#" onClick={() => {setShowCookiePolicy(true)}}>{t('cookieWarning.here')}</a>
         </ CookieConsent>
-        {showSettings ? <CookieSettings/> : null}
         {showCookiePolicy ? <CookiePolicy disableCookiePolicy={disableCookiePolicy}/> : null}
     </>
 

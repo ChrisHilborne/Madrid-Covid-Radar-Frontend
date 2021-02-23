@@ -12,7 +12,15 @@ i18n
   .use(initReactI18next)
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
-    fallbackLng: ["es"],
+    lng: ['es', 'en'],
+    fallbackLng: 'es',
+    backend: {
+      /* translation file path */
+      loadPath: '/locales/{{lng}}/{{ns}}.json'
+    },
+    ns: ['translation','cookie_policy', 'privacy_policy'],
+    defaultNS: 'translation',
+    fallbackNS: 'translation',
     debug: true,
     detection: {
         order: ['queryString', 'cookie'],

@@ -7,10 +7,26 @@ h6 {
     color:lightslategray;
 }
 
+h3 {
+    padding: 1rem;
+}
+
+p {
+    padding: 0.5rem;
+}
+
 .navbar {
     background-color: rgba(36, 70, 240, 1);
     margin-bottom: 20px;
     max-height: 10vh;
+}
+
+.nav-link {
+    color: rgba(255,255,255,0.5); 
+}
+
+.nav-link:hover {
+    color: white;
 }
 
 .footer {
@@ -64,10 +80,20 @@ h6 {
     color: white;
 }
 
-.link {
+.breadcrumb-item {
+    color: white;
+}
+
+
+.text-link {
     color: #007bff;
 }
 
 a {
-    color: rgba(255,255,255,.5);
+    color: rgba(255,255,255,0.5);
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
 }

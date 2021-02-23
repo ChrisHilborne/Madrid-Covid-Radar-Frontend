@@ -15,15 +15,15 @@ const NavBarTop = () => {
                 <Navbar.Brand href="/">Covid Radar Madrid</Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse >
-                    <Nav className="mr-auto">
-                        <Nav.Link href="info">{t("navbar.info")}</Nav.Link>
-                        <Nav.Link href="contact">{t("navbar.contact")}</Nav.Link>
+                    <Nav className="mr-auto nav-link">
+                        <Nav.Link className="nav-link" href="info">{t("navbar.info")}</Nav.Link>
+                        <Nav.Link className="nav-link" href="contact">{t("navbar.contact")}</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
                 <Nav className="ml-auto">
                     <Breadcrumb className="breadcrumb-cont align-items-center">
-                        <Breadcrumb.Item className="breadcrumb-item" onClick={() => changeLanguage("es")}>ES</Breadcrumb.Item>
-                        <Breadcrumb.Item className="breadcrumb-item" onClick={() => changeLanguage("en")}>EN</Breadcrumb.Item>
+                        <Breadcrumb.Item onClick={() => changeLanguage("es")}>ES</Breadcrumb.Item>
+                        <Breadcrumb.Item onClick={() => changeLanguage("en")}>EN</Breadcrumb.Item>
                     </Breadcrumb>
                 </Nav>
             </Navbar>

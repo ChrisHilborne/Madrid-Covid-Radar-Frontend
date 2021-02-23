@@ -1,14 +1,15 @@
 {
     "locale" : "en",
 
-    "formUI": {
-        "healthWard": "Health Ward",
-        "data": "Figures",
-        "dataOption1": "Infection Rate per 100,000 people (last two weeks)",
-        "dataOption2": "Total Infection Rate per 100,00 people", 
-        "dataOption3": "Total Cases", 
-        "dataOption4": "Cases (last two weeks)"
+    "formUI" : {
+            "healthWard": "Health Ward",
+            "data": "Figures",
+            "dataOption1": "Infection Rate per 100,000 people (last two weeks)",
+            "dataOption2": "Total Infection Rate per 100,00 people", 
+            "dataOption3": "Total Cases", 
+            "dataOption4": "Cases (last two weeks)"
     },
+    
 
     "navbar": {
         "info": "About",
@@ -34,7 +35,7 @@
 
     "cookieWarning": {
         "consent": "Accept Cookies",
-        "settings": "Adjust Settings",
+        "settings": "Reject Cookies",
         "text": "This website uses cookies to enhance the user experience. To read our cookie policy click ",
         "here": "here."
     }

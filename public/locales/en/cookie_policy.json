@@ -1,0 +1,17 @@
+{ 
+    
+
+    "settings": {
+        "title": "CONTROL OF COOKIES",
+        "para1": "Most browsers are set to accept cookies by default. However, you can remove or reject cookies in your browser’s settings. Please be aware that such action could affect the availability and functionality of the Site. For more information on how to control cookies, check your browser or device’s settings for how you can control or reject cookies, or visit the following links:",
+        "para2": "",
+        "safari": "https://support.apple.com/en-gb/guide/safari/sfri11471/mac",
+        "chrome": "https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DDesktop&hl=en",
+        "microsoft": "https://support.microsoft.com/en-us/topic/delete-and-manage-cookies-168dab11-0753-043d-7c16-ede5947fc64d",
+        "firefox": "https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop?redirectslug=enable-and-disable-cookies-website-preferences&redirectlocale=en-US", 
+        "opera": "https://help.opera.com/en/latest/",
+        "other": "In addition, you may opt-out of some third-party cookies through the Network Advertising Initiative’s Opt-Out Tool ",
+        "otherLink": "https://optout.networkadvertising.org/?c=1" 
+    },
+
+}

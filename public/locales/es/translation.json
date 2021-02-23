@@ -35,8 +35,8 @@
 
     "cookieWarning": {
         "consent": "Aceptar Cookies",
-        "settings": "Ajustar Configuración",
-        "text": "Esta página usa cookies para mejorar la experiencia del usario. Para leer la política de cookies haz clic ",
-        "here": "aquí."
+        "settings": "Rechazar Cookies",
+        "text": "El sitio web www.madridcovidradar.es utiliza cookies propias y de terceros para recopilar información que ayuda a optimizar su visita a sus páginas web. No se utilizarán las cookies para recoger información de carácter personal. Usted puede permitir su uso o rechazarlo, también puede cambiar su configuración siempre que lo desee. Encontrará más información en nuestra ",
+        "here": "Política de Cookies."
     }
 }
