@@ -24,36 +24,43 @@ import Revokability from './Sub-Components/17.Revokability';
 import Changes from './Sub-Components/18.Changes';
 
 const PrivacyPolicy = ( {disablePrivacyPolicy} ) => {
-        const { t } = useTranslation('privacy_policy');
-      
-        return (
-          <>
-            <InfoModal
-              disable={disablePrivacyPolicy}
-              title={t('title')}
-              elements={[
-                <Intro/>,
-                <Id/>,
-                <Principles/>,
-                <Collection/>,
-                <Rights/>, 
-                <Finality/>, 
-                <Security/>, 
-                <OtherSites/>, 
-                <Cookies/>, 
-                <LegitimateUse/>,
-                <Categories/>,
-                <Conservation/>,
-                <Destination/>,
-                <Browser/>,
-                <Truthfulness/>,
-                <Acceptance/>,
-                <Revokability/>,
-                <Changes/>
-                ]} 
-            />
-          </>
-        );
+  const { t } = useTranslation('privacy_policy'); 
+
+  const items = [
+    <Intro/>,
+    <Id/>,
+    <Principles/>,
+    <Collection/>,
+    <Rights/>, 
+    <Finality/>, 
+    <Security/>, 
+    <OtherSites/>, 
+    <Cookies/>, 
+    <LegitimateUse/>,
+    <Categories/>,
+    <Conservation/>,
+    <Destination/>,
+    <Browser/>,
+    <Truthfulness/>,
+    <Acceptance/>,
+    <Revokability/>,
+    <Changes/>];
+
+  const elements = [];
+
+  for (const [index, value] of items.entries()) {
+    elements.push(<div key={index}>{value}</div>)
+  }
+
+  return (
+    <>
+      <InfoModal
+        disable={disablePrivacyPolicy}
+        title={t('title')}
+        elements={elements}
+      />
+    </>
+  );
 }
 
 export default PrivacyPolicy

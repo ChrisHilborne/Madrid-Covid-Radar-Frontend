@@ -2,7 +2,7 @@ import { React, useState } from 'react';
 import { Navbar , Nav } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
-import CookiePolicy from "./Cookies/CookiePolicy.js";
+import CookiePolicy from "./Cookies/Policy/CookiePolicy.js";
 import PrivacyPolicy from "./Privacy/PrivacyPolicy.js";
 
 

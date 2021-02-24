@@ -1,8 +1,7 @@
 import { React, useState } from 'react';
 import CookieConsent from 'react-cookie-consent';
 import { useTranslation } from 'react-i18next';
-import InfoModal from '../InfoModal';
-import CookiePolicy from './CookiePolicy'
+import CookiePolicy from './Policy/CookiePolicy'
 
 const CookieWarning = () => {
     const [showCookiePolicy, setShowCookiePolicy] = useState(false);
