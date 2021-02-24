@@ -69,9 +69,71 @@
         "p2": "El sitio Web está alojado en Amazon AWS. La seguridad de tus datos está garantizada, ya que toman todas las medidas de seguridad necesarias para ello. Puedes consultar su política de privacidad para tener más información."
     },
 
-    "other": {
+    "otherSites": {
         "title": "Contenido de otros sitios web",
         "p1": "Para que este sitio Web funcione correctamente necesita utilizar cookies, que es una información que se almacena en tu navegador web.",
         "p2": "En la página Política de Cookies puedes consultar toda la información relativa a la política de recogida, la finalidad y el tratamiento de las cookies."
+    },
+
+    "cookies": {
+        "title": "Política de Cookies",
+        "p1": "Para que este sitio Web funcione correctamente necesita utilizar cookies, que es una información que se almacena en tu navegador web.",
+        "p2": "En la página Política de Cookies puedes consultar toda la información relativa a la política de recogida, la finalidad y el tratamiento de las cookies."
+    },
+
+    "legitimateUse": {
+        "title": "Legitimación para el tratamiento de datos",
+        "p1": "La base legal para el tratamiento de tus datos es: el consentimiento.",
+        "p2": "Para contactar con el Titular, suscribirte a un boletín o realizar comentarios en este sitio Web tienes que aceptar la presente Política de Privacidad."
+    },
+
+    "categories": {
+        "title": "Categorías de datos personales",
+        "p1": "Las categorías de datos personales que trata el Titular son:",
+        "l1": "Datos identificativos."
+    },
+
+    "conservation": {
+        "title": "Conservación de datos personales",
+        "p1": "Los datos personales que proporciones al Titular se conservarán hasta que solicites su supresión."
+    },
+
+    "destination": {
+        "title": "Destinatarios de datos personales",
+        "subtitle1": "Google Analytics",
+        "l1p1": "es un servicio de analítica web prestado por Google, Inc., una compañía de Delaware cuya oficina principal está en 1600 Amphitheatre Parkway, Mountain View (California), CA 94043, Estados Unidos (“Google”).",
+        "l1p2": "Google Analytics utiliza “cookies”, que son archivos de texto ubicados en tu ordenador, para ayudar al Titular a analizar el uso que hacen los usuarios del sitio Web. La información que genera la cookie acerca del uso del sitio Web (incluyendo tu dirección IP) será directamente transmitida y archivada por Google en los servidores de Estados Unidos.",
+        "p1": "También puedes ver una lista de los tipos de cookies que utiliza Google y sus colaboradores y toda la información relativa al uso que hacen de cookies publicitarias."  
+    },
+
+    "browser": {
+        "title": "Navegación Web",
+        "p1": "Al navegar por www.covidradarmadrid.es se pueden recoger datos no identificativos, que pueden incluir, la dirección IP, geolocalización, un registro de cómo se utilizan los servicios y sitios, hábitos de navegación y otros datos que no pueden ser utilizados para identificarte.",
+        "p2": "El sitio Web utiliza los siguientes servicios de análisis de terceros:",
+        "l1": "Google Analytics",
+        "p3": "El Titular utiliza la información obtenida para obtener datos estadísticos, analizar tendencias, administrar el sitio, estudiar patrones de navegación y para recopilar información demográfica."
+    },
+
+    "truthfulness": {
+        "title": "Exactitud y veracidad de los datos personales",
+        "p1": "Te comprometes a que los datos facilitados al Titular sean correctos, completos, exactos y vigentes, así como a mantenerlos debidamente actualizados.",
+        "p2": "Como Usuario del sitio Web eres el único responsable de la veracidad y corrección de los datos que remitas al sitio exonerando a el Titular de cualquier responsabilidad al respecto."
+    },
+
+    "acceptance": {
+        "title": "Aceptación y consentimiento",
+        "p1": "Como Usuario del sitio Web declaras haber sido informado de las condiciones sobre protección de datos de carácter personal, aceptas y consientes el tratamiento de los mismos por parte de el Titular en la forma y para las finalidades indicadas en esta Política de Privacidad."
+    },
+
+    "revokability": {
+        "title": "Revocabilidad",
+        "p1": "Para ejercitar tus derechos de acceso, rectificación, cancelación, portabilidad y oposición tienes que enviar un correo electrónico a covidradarmadrid@gmail.es junto con la prueba válida en derecho como una fotocopia del D.N.I. o equivalente",
+        "p2": "El ejercicio de tus derechos no incluye ningún dato que el Titular esté obligado a conservar con fines administrativos, legales o de seguridad."
+    },
+
+    "changes": {
+        "title": "Cambios en la Política de Privacidad",
+        "p1": "El Titular se reserva el derecho a modificar la presente Política de Privacidad para adaptarla a novedades legislativas o jurisprudenciales, así como a prácticas de la industria.",
+        "p2": "Estas políticas estarán vigentes hasta que sean modificadas por otras debidamente publicadas."
     }
 }

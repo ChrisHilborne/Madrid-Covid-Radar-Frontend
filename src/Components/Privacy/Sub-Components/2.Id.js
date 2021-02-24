@@ -7,6 +7,7 @@ const Id = () =>{
     return (
         <>
           <h3>{t('id.title')}</h3>
+          <p>
           <u1>
             <li>{t('id.name')}</li>
             <li>{t('id.id')}</li>
@@ -14,6 +15,7 @@ const Id = () =>{
             <li>{t('id.email')}</li>
             <li>{t('id.website')}</li>
           </u1>
+          </p>
         </>
     );
 }

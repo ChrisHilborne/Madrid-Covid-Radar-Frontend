@@ -1,13 +1,18 @@
-{   "settings": {
-    "title": "Desactivación y eliminación de cookies",
-    "para1": "Tienes la opción de permitir, bloquear o eliminar las cookies instaladas en tu equipo mediante la configuración de las opciones del navegador instalado en su equipo. Al desactivar cookies, algunos de los servicios disponibles podrían dejar de estar operativos. La forma de deshabilitar las cookies es diferente para cada navegador, pero normalmente puede hacerse desde el menú Herramientas u Opciones. También puede consultarse el menú de Ayuda del navegador dónde puedes encontrar instrucciones. El usuario podrá en cualquier momento elegir qué cookies quiere que funcionen en este sitio web.",
-    "para2": "Puede usted permitir, bloquear o eliminar las cookies instaladas en su equipo mediante la configuración de las opciones del navegador instalado en su ordenador:",
-    "microsoft": "http://windows.microsoft.com/es-es/windows-vista/Block-or-allow-cookies",
-    "firefox": "http://support.mozilla.org/es/kb/impedir-que-los-sitios-web-guarden-sus-preferencia",
-    "chrome": "https://support.google.com/accounts/answer/61416?hl=es",
-    "safari": "http://safari.helpmax.net/es/privacidad-y-seguridad/como-gestionar-las-cookies/",
-    "opera": "http://help.opera.com/Linux/10.60/es-ES/cookies.html",
-    "other": "Además, también puede gestionar el almacén de cookies en su navegador a través de herramientas como esta ",
-    "otherLink": "www.ghostery.com/"
-},
+{   
+    
+
+
+
+    "settings": {
+        "title": "Desactivación y eliminación de cookies",
+        "para1": "Tienes la opción de permitir, bloquear o eliminar las cookies instaladas en tu equipo mediante la configuración de las opciones del navegador instalado en su equipo. Al desactivar cookies, algunos de los servicios disponibles podrían dejar de estar operativos. La forma de deshabilitar las cookies es diferente para cada navegador, pero normalmente puede hacerse desde el menú Herramientas u Opciones. También puede consultarse el menú de Ayuda del navegador dónde puedes encontrar instrucciones. El usuario podrá en cualquier momento elegir qué cookies quiere que funcionen en este sitio web.",
+        "para2": "Puede usted permitir, bloquear o eliminar las cookies instaladas en su equipo mediante la configuración de las opciones del navegador instalado en su ordenador:",
+        "microsoft": "http://windows.microsoft.com/es-es/windows-vista/Block-or-allow-cookies",
+        "firefox": "http://support.mozilla.org/es/kb/impedir-que-los-sitios-web-guarden-sus-preferencia",
+        "chrome": "https://support.google.com/accounts/answer/61416?hl=es",
+        "safari": "http://safari.helpmax.net/es/privacidad-y-seguridad/como-gestionar-las-cookies/",
+        "opera": "http://help.opera.com/Linux/10.60/es-ES/cookies.html",
+        "other": "Además, también puede gestionar el almacén de cookies en su navegador a través de herramientas como esta ",
+        "otherLink": "www.ghostery.com/"
+    }
 }

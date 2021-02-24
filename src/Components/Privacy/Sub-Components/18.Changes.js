@@ -1,17 +1,17 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-const Intro = () =>{
+const Changes = () => {
     const { t } = useTranslation('privacy_policy');
 
-    return(
+    return (
         <>
-          <h3>{t('other.title')}</h3>
-          <p>{t('other.p1')}</p>
-          <p>{t('other.p2')}</p>
+        <h3>{t('changes.title')}</h3>
+        <p>{t('changes.p1')}</p>
+        <p>{t('changes.p2')}</p>
         </>
     );
     
 }
 
-export default Intro
+export default Changes

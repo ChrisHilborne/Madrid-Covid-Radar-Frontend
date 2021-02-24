@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-const Intro = () =>{
+const Finality = () =>{
     const { t } = useTranslation('privacy_policy');
 
     return (
@@ -11,7 +11,7 @@ const Intro = () =>{
           <p>{t('finality.p2')}</p>
           <ul>
             <li>
-              <p><strong>{t('finality.subtitle')}</strong> {t('finality.l1.p1')}<br />{t('finality.l1.p2')}</p>
+              <strong>{t('finality.subtitle')}</strong> {t('finality.l1.p1')}<br />{t('finality.l1.p2')}
             </li>
           </ul>
           <p>{t('finality.other')}</p>
@@ -25,4 +25,4 @@ const Intro = () =>{
     
 }
 
-export default Intro
+export default Finality

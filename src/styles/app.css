@@ -12,7 +12,8 @@ h3 {
 }
 
 p {
-    padding: 0.5rem;
+    padding: 0.1rem;
+    padding-left: 1rem;
 }
 
 .navbar {
@@ -75,13 +76,25 @@ p {
     align-content: center;
 }
 
+.changelang-modal {
+    line-height: 12px;
+    height: 24px;
+    text-align: center;
+    align-content: center;
+}
+
 .breadcrumb {
     background-color: rgba(36, 70, 240, 1);
     color: white;
+    align-items: center;
 }
 
 .breadcrumb-item {
     color: white;
+}
+
+.modal-header {
+    align-items: center;
 }
 
 
