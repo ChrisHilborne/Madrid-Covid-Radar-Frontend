@@ -1,8 +1,7 @@
-import { React, useState } from 'react';
-import { Container, Row, Col, Modal, Button } from 'react-bootstrap';
+import { React } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import ChangeLang from '../ChangeLang';
+import InfoModal from '../InfoModal' 
 
 //sub-components
 import Intro from './Sub-Components/1.Intro';
@@ -25,59 +24,34 @@ import Revokability from './Sub-Components/17.Revokability';
 import Changes from './Sub-Components/18.Changes';
 
 const PrivacyPolicy = ( {disablePrivacyPolicy} ) => {
-        const [show, setShow] = useState(true);
         const { t } = useTranslation('privacy_policy');
-      
-        const handleClose = () => {
-          setShow(false);
-          disablePrivacyPolicy();
-        };
       
         return (
           <>
-            <Modal
-              size="lg" 
-              show={show} 
-              onHide={handleClose} 
-            >
-              <Modal.Header closeButton>
-                <Container>
-                  <Row className="align-items-centre">
-                    <Col className="justify-content-start align-items-centre">
-                      <Modal.Title className="d-flex align-items-centre">{t('intro.title')}</Modal.Title>
-                    </Col>
-                    <Col className="d-flex justify-content-end align-items-centre">
-                      <ChangeLang clazz="changelang-modal" />
-                    </Col>
-                  </Row>
-                </Container>
-              </Modal.Header>
-              <Modal.Body className="p-1">
-                  <Intro />
-                  <Id />
-                  <Principles />
-                  <Collection />
-                  <Rights />
-                  <Finality />
-                  <Security />
-                  <OtherSites />
-                  <Cookies />
-                  <LegitimateUse />
-                  <Categories />
-                  <Conservation />
-                  <Destination />
-                  <Browser />
-                  <Truthfulness />
-                  <Acceptance />
-                  <Revokability />
-                  <Changes />
-              </Modal.Body>
-              <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose}>
-                  Close
-                </Button>
-              </Modal.Footer>
-            </Modal>
+            <InfoModal
+              disable={disablePrivacyPolicy}
+              title={t('title')}
+              elements={[
+                <Intro/>,
+                <Id/>,
+                <Principles/>,
+                <Collection/>,
+                <Rights/>, 
+                <Finality/>, 
+                <Security/>, 
+                <OtherSites/>, 
+                <Cookies/>, 
+                <LegitimateUse/>,
+                <Categories/>,
+                <Conservation/>,
+                <Destination/>,
+                <Browser/>,
+                <Truthfulness/>,
+                <Acceptance/>,
+                <Revokability/>,
+                <Changes/>
+                ]} 
+            />
           </>
         );
 }
