@@ -1,0 +1,91 @@
+{
+    "title": "Privacy Policy",
+
+    "intro": {
+        "p1":"Last Updated 25/02/2021.",
+        "p2": "This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.",
+        "p3": "We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy."
+    },
+
+
+    "collection": {
+        "title": "Types of Data Collected",
+        "p1": "",
+        "l1": "Personal Data: While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to: email address, usage data."
+    },
+
+    "finality": {
+        "title": "Disclosure of Your Personal Data",
+        "p1": "",
+        "p2": "In certain situation we may discloe your data to third parties - these situations include:",
+        "subtitle": "Law enforcement",
+        "l1": {
+            "p1": "Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).",
+            "p2": ""
+        },
+        "other": "The Company may disclose Your Personal Data in the good faith belief that such action is necessary to: ",
+        "l2": "Comply with a legal obligation.",
+        "l3": "Prevent or investigate possible wrongdoing in connection with the Service.",
+        "l4": "Protect the personal safety of Users of the Service or the public"
+    },
+
+    "security": {
+        "title": "Security of Your Personal Data",
+        "p1": "The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.",
+        "p2": "El sitio Web está alojado en Amazon AWS. La seguridad de tus datos está garantizada, ya que toman todas las medidas de seguridad necesarias para ello. Puedes consultar su política de privacidad para tener más información."
+    },
+
+    "otherSites": {
+        "title": "Links to Other Websites",
+        "p1": "Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit.",
+        "p2": "We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services."
+    },
+
+    "cookies": {
+        "title": "Tracking Technologies and Cookies",
+        "p1": "We use Cookies and similar tracking technologies to track the activity on Our Service and store certain information. Tracking technologies used are beacons, tags, and scripts to collect and track information and to improve and analyze Our Service.",
+        "p2": "In the Cookies Policy page you will find all of the relevant information regarding our usage of cookies on the Site."
+    },
+
+    "legitimateUse": {
+        "title": "Use of Your Personal Data",
+        "p1": "",
+        "p2": "We may use your personal data to contact you by email regarding updates or informative communications related to the functionalities, products or contracted services, including the security updates, when necessary or reasonable for their implementation."
+    },
+
+    "categories": {
+        "title": "Categories of Personal Data Collected",
+        "p1": "The categories of personal data we collect are:",
+        "l1": "Contact data."
+    },
+
+    "conservation": {
+        "title": "Retention of Your Personal Data",
+        "p1": "We will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies."
+    },
+
+    "destination": {
+        "title": "Destinations of Personal Data",
+        "subtitle1": "Google Analytics",
+        "l1p1": "is a simple, easy-to-use tool that helps website owners measure how users interact with website content.",
+        "l1p2": "Google Analytics uses cookies to track and record your behaviour on the Site. All of the data that is collected (including you IP address) is immediately transfered and stored on Google's servers in the United States",
+        "p1": "You can find our more about GOole Analytics usage of cookies on their website."  
+    },
+
+    "acceptance": {
+        "title": "Acceptance and Understanding",
+        "p1": "As User of the Site you declare to have been informed of the conditionsregarding the protection of personal data and accept them as they have been set out in this Privacy Policy."
+    },
+
+    "revokability": {
+        "title": "",
+        "p1": "",
+        "p2": ""
+    },
+
+    "changes": {
+        "title": "Changes to this Privacy Policy",
+        "p1": "We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.",
+        "p2": "We will let You know via email and/or a prominent notice on Our Service, prior to the change becoming effective and update the 'Last updated' date at the top of this Privacy Policy. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page."
+    }
+}

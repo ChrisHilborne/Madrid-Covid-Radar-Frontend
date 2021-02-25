@@ -10,11 +10,11 @@ const Settings = () =>{
           <p>{t('settings.p1')}</p>
           <p>{t('settings.p1')}</p>
           <ul>
-            <li><a href={t('settings.chrome')}>Chrome</a></li>
-            <li><a href={t('settings.microsoft')}>Microsoft Edge</a></li>
-            <li><a href={t('settings.firefox')}>Firefox</a></li>
-            <li><a href={t('settings.safari')}>Safari</a></li>
-            <li><a href={t('settings.opera')}>Opera</a></li>
+            <li><a className="text-link" href={t('settings.chrome')}>Chrome</a></li>
+            <li><a className="text-link" href={t('settings.microsoft')}>Microsoft Edge</a></li>
+            <li><a className="text-link" href={t('settings.firefox')}>Firefox</a></li>
+            <li><a className="text-link" href={t('settings.safari')}>Safari</a></li>
+            <li><a className="text-link" href={t('settings.opera')}>Opera</a></li>
           </ul>
           <p>{t('settings.p3')} <a href={t('setting.link')}>{t('setting.link')}</a></p>
         </>

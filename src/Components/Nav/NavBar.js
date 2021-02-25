@@ -18,7 +18,7 @@ const NavBarTop = () => {
                     </Nav>
                 </Navbar.Collapse>
                 <Nav className="ml-auto">
-                    <ChangeLang clazz="changelang-navbar align-items-center" />
+                    <ChangeLang clazz="changelang-navbar align-items-middle" />
                 </Nav>
             </Navbar>
         </>

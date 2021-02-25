@@ -24,8 +24,6 @@ const Types = () =>{
             <li><strong>{t('types.l6.subtitle')}</strong> {t('types.l6.text')} </li>
             <li><strong>{t('types.l7.subtitle')}</strong> {t('types.l7.text')} </li>
             <li><strong>{t('types.l8.subtitle')}</strong> {t('types.l8.text')} </li>
-            <li><strong>{t('types.l9.subtitle')}</strong> {t('types.l9.text')} </li>
-            <li><strong>{t('types.l10.subtitle')}</strong> {t('types.l10.text')} </li>
           </ul>
         </>
     );
