@@ -21,7 +21,7 @@ i18n
     ns: ['translation','cookie_policy', 'privacy_policy'],
     defaultNS: 'translation',
     fallbackNS: 'translation',
-    debug: true,
+    debug: false,
     detection: {
         order: ['queryString', 'cookie'],
         cache: ['cookie']

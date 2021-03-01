@@ -35,7 +35,7 @@ p {
     color: white;
     position: relative;
     bottom: 0;
-    max-height: 8.3vh;
+    max-height: 9vh;
 }
 
 .page-container {
@@ -70,7 +70,7 @@ p {
 }
 
 .changelang-navbar {
-    margin-top: 1rem;
+    margin-top: 0.1vh;
     line-height: 0.2rem;
     text-align: center;
     align-content: center;

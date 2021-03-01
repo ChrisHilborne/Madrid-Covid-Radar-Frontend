@@ -5,14 +5,14 @@ import 'moment/locale/es';
 import { useTranslation } from 'react-i18next';
 
 const GraphInfo = ( healthWard ) => {
-    const { name, lastUpdated, totalCases, dailyRecords, recordCount} = healthWard.healthWard;
+    const { name, totalCases, lastUpdated, dailyRecords, recordCount} = healthWard.healthWard;
     const { t } = useTranslation();
 
     var actualCases = dailyRecords[recordCount - 1].twoWeekCases;
     
-    const formatDate = (lastUpdated) => {
+    const formatDate = () => {
         moment.locale(t('locale'));
-        var date = moment(lastUpdated);
+        var date = moment(lastUpdated[0] + "-" + lastUpdated[1] + "-" + lastUpdated[2], "YYYY-MM-DD");
         return date.format('DD MMMM YYYY'); 
     }
 

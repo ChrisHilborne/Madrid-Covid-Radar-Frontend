@@ -7,7 +7,8 @@ import { useTranslation } from 'react-i18next';
 const GraphUI = ( { healthWard, dataChoice } ) => {
     const { t } = useTranslation();
 
-    const dataLabel = (dataChoice) =>{
+    const dataLabel = () =>{
+        console.log(t('formUI.dataOption1'));
         return dataChoice === null ? t('formUI.dataOption1') : dataChoice.label;
     }
     
@@ -55,7 +56,7 @@ const GraphUI = ( { healthWard, dataChoice } ) => {
     var data = {
         labels: labels(),
         datasets: [{
-            label:  {dataLabel},
+            label:  dataLabel(),
             backgroundColor: "rgba(51, 129, 255, 0.5)",
             hoverBackgroundColor: "rgba(51, 129, 255, 1)",
             data: figures(),
@@ -99,7 +100,8 @@ const GraphUI = ( { healthWard, dataChoice } ) => {
         <>
             <Container fluid="md" className="mb-2">
                 <GraphInfo 
-                    healthWard={healthWard} 
+                    healthWard={healthWard}
+                    lastUpdated={toString(healthWard.lastUpdated)} 
                 />
                 <Bar
                     data={data}

@@ -27,8 +27,6 @@ const FormUI = ( {passUpDataType, passUpGeoCode, options} ) => {
     return (
         
         <Container fluid="md">
-            {console.log("I'm here.")}
-            
             <Form.Row>
                 <Col className="mb-3" xs={12} sm={12} md={12} lg={6} xl={6}>
                     <Select

@@ -20,7 +20,7 @@
     }
     h5,
     .h5 {
-      font-size: calc(1.2rem + 0.3vw);
+      font-size: calc(1.15rem + 0.2vw);
     }
     h6,
     .h6 {
@@ -36,7 +36,7 @@
       font-size: calc(1.575rem + 3.9vw);
     }
     .display-4 {
-      font-size: calc(1.475rem + 2.7vw);
+      font-size: calc(1.470rem + 2.5vw);
     }
     .close {
       font-size: calc(1.275rem + 0.3vw);
