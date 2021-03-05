@@ -1,14 +1,19 @@
-import React from 'react';
+import { React, useState} from 'react';
 import { Navbar , Nav } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
-import ChangeLang from '../ChangeLang';
 
 const NavBarTop = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const [activeLang, setActiveLang] = useState(i18n.language);
+
+    const changeLang = (eventKey) => {
+        i18n.changeLanguage(eventKey);
+        setActiveLang(eventKey);
+    }
 
     return(
         <>
-            <Navbar className="container fluid rounded-bottom" variant="dark" expand="md">
+            <Navbar className="container rounded-bottom" variant="dark" expand="md">
                 <Navbar.Brand href="/">Covid Radar Madrid</Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse >
@@ -17,8 +22,13 @@ const NavBarTop = () => {
                         <Nav.Link className="nav-link" href="contact">{t("navbar.contact")}</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
-                <Nav className="ml-auto">
-                    <ChangeLang clazz="changelang-navbar align-items-middle" />
+                <Nav variant="pills" activeKey={activeLang} onSelect={changeLang}>
+                    <Nav.Item>
+                        <Nav.Link eventKey="es">ES</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link eventKey="en">EN</Nav.Link>
+                    </Nav.Item>
                 </Nav>
             </Navbar>
         </>

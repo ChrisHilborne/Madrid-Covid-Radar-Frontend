@@ -38,7 +38,9 @@
         "settings": "Reject Cookies",
         "text": "This website uses cookies to enhance the user experience. To read our cookie policy click ",
         "here": "here."
-    }
+    },
+
+    "turnDevice": "Please turn your device."
 
     
 }

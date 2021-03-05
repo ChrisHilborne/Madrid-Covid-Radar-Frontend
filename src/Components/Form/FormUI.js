@@ -28,7 +28,7 @@ const FormUI = ( {passUpDataType, passUpGeoCode, options} ) => {
         
         <Container fluid="md">
             <Form.Row>
-                <Col className="mb-3" xs={12} sm={12} md={12} lg={6} xl={6}>
+                <Col className="mb-3" xs={12} sm={6} md={6} lg={6} xl={6}>
                     <Select
                         name="healthWard"
                         options={options}
@@ -38,7 +38,7 @@ const FormUI = ( {passUpDataType, passUpGeoCode, options} ) => {
                         isSearchable
                     />
                 </Col>
-                <Col className="mb-3" xs={12} sm={12} md={12} lg={6} xl={6}>
+                <Col className="mb-3" xs={12} sm={6} md={6} lg={6} xl={6}>
                     <Select
                         name="data" 
                         options={dataOptions}
