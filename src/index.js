@@ -7,8 +7,7 @@ import './i18n';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // local styles
-import './scss/rfs.scss';
-import './styles/rfs.css'
+import './styles/rfs.css';
 import './styles/app.css';
 
 ReactDOM.render(
