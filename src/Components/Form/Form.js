@@ -11,7 +11,7 @@ const Form = () => {
     const [dataType, setDataType] = useState(null);
 
 
-    const urlOptions = 'http://covidradarmadrid-env.eba-wbgad2ub.eu-south-1.elasticbeanstalk.com/api/names&geocodes';
+    const urlOptions = 'https://api.covidradarmadrid.es/api/names&geocodes';
 
     useEffect( () => {
         async function getOptions() {

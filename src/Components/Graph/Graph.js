@@ -10,7 +10,7 @@ const Graph = ( { geoCode, dataChoice } ) => {
     const [healthWard, setHealthWard] = useState(null);
     
 
-    const url = 'http://covidradarmadrid-env.eba-wbgad2ub.eu-south-1.elasticbeanstalk.com/api/geocode/';
+    const url = 'https://api.covidradarmadrid.es/api/geocode/';
 
     useEffect(() => {
         const getData = (geoCode) => {
