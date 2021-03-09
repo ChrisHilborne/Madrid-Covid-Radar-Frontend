@@ -1,0 +1,15 @@
+{
+    "title": "About",
+    "p1": "This website collects data from the Comunidad de Madrid ",
+    "link1": "Open Data platform",
+    "p2": " and presents it in an easy to understand form.",
+    "p3": " All of the data comes from the authorities in Madrid - and is available at the Health Ward level. The data is updated every Tuesday.",
+
+    "p4": "The site was created in part as a service to the people of Madrid, but also as a learning project - to help me continue to grow and learn as a budding web developer.",
+    "frontend": " The GutHub repository for the React.js frontend can be found ", 
+    "here": "here.",
+    "backend": " The repo for the Java SpringBoot backend can be found ",
+
+    "contact": "If you have any questions or queeries, please don't hesitate to contact me via the contact form which can be found "
+
+}

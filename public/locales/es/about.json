@@ -1,0 +1,15 @@
+{
+    "title": "Info",
+    "p1": "Este sito recoge datos de la plataforma de la Comunidad de Madrid ",
+    "link1": "Datos Abiertos",
+    "p2": " y lo presenta en una forma que es simple para entender.",
+    "p3": " Todos los datos vienen de la Comunidad - y esta disponible al nivel de zona basica de salud. Los datos son actualizados todos los martes.",
+
+    "p4": "El sitio fue creado para ayudar a los ciudanos de Madrid informadles, pero tambien para siguir aprendiendo en el campo de desarollo Web.",
+    "frontend": " El repository de GitHub del React.js frontend esta localizado ", 
+    "here": "aqui.",
+    "backend": " Y el repo del Java SpringBoot backend esta ",
+
+    "contact": "Cualquier duda o pregunta, profavor no demoras contactarme por el formulario "
+
+}
