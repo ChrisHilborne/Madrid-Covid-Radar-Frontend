@@ -6,6 +6,7 @@ const ChangeLang = ( { clazz } ) => {
     const { i18n } = useTranslation();
 
     const changeLanguage = (lang) => {
+        localStorage.setItem('lang', lang);
         i18n.changeLanguage(lang);
     }
 

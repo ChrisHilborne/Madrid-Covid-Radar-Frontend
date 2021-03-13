@@ -1,15 +1,13 @@
-import { React, useState} from 'react';
+import { React, useState, useEffect } from 'react';
 import { Navbar , Nav } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
 const NavBarTop = () => {
     const { t, i18n } = useTranslation();
-    const [activeLang, setActiveLang] = useState(i18n.language);
 
-    const changeLang = (eventKey) => {
+    const changeLang = (eventKey) => { 
         i18n.changeLanguage(eventKey);
-        setActiveLang(eventKey);
-    }
+    };
 
     return(
         <>
@@ -22,7 +20,7 @@ const NavBarTop = () => {
                         <Nav.Link className="nav-link" href="contact">{t("navbar.contact")}</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
-                <Nav variant="pills" activeKey={activeLang} onSelect={changeLang}>
+                <Nav variant="pills" defaultActiveKey={i18n.language} onSelect={changeLang}>
                     <Nav.Item>
                         <Nav.Link eventKey="es">ES</Nav.Link>
                     </Nav.Item>
