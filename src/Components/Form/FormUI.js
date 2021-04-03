@@ -4,12 +4,16 @@ import { Col, Container, Form } from 'react-bootstrap';
 import Select from 'react-select';
 
 
-const FormUI = ( {passUpDataType, passUpGeoCode, options} ) => {
+const FormUI = ( {options, passUpGeoCode, passUpDataType} ) => {
     const { t } = useTranslation();
 
 
-    const handleChangeHealthWard = (healthWard) => {
-        passUpGeoCode(healthWard.value);
+    const handleChangeHealthWard = (healthWards) => {
+        var geoCodes = [];
+        healthWards.forEach(healthWard => {
+            geoCodes.push(healthWard.value);
+        });
+        passUpGeoCode(geoCodes);
     };
 
     const handleChangeDataType = (dataType) => {
@@ -19,9 +23,7 @@ const FormUI = ( {passUpDataType, passUpGeoCode, options} ) => {
 
     const dataOptions = [
         {label: t('formUI.dataOption1'), value: "twoWeekRate"},
-        {label: t('formUI.dataOption2'), value: "totalRate"},
-        {label: t('formUI.dataOption3'), value: "totalCases"},
-        {label: t('formUI.dataOption4'), value: "twoWeekCases"}
+        {label: t('formUI.dataOption3'), value: "totalCases"}
     ];
 
     return (
@@ -34,6 +36,7 @@ const FormUI = ( {passUpDataType, passUpGeoCode, options} ) => {
                         options={options}
                         onChange={ (selected) => handleChangeHealthWard(selected)}
                         autoFocus
+                        isMulti
                         placeholder={t('formUI.healthWard')}
                         isSearchable
                     />

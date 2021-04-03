@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useState, useEffect } from 'react';
 import { Bar } from "react-chartjs-2";
 import { Container } from 'react-bootstrap'; 
 import GraphInfo from './GraphInfo.js';
@@ -6,9 +6,34 @@ import { useTranslation } from 'react-i18next';
 
 const GraphUI = ( { healthWard, dataChoice } ) => {
     const { t } = useTranslation();
+    const [dataSets, setDataSets] = useState();
 
-    const dataLabel = () =>{
-        console.log(t('formUI.dataOption1'));
+    const first = healthWard.values().next();
+
+    useEffect(() => {
+        var data = [];
+        healthWard.values().forEach(ward => {
+            const dataLabel = dataLabel(ward);
+            const figures = figures(ward); 
+            data.push({
+                label: dataLabel,
+                backgroundColor: "rgba(51, 129, 255, 0.5)",
+                hoverBackgroundColor: "rgba(51, 129, 255, 1)",
+                data: figures,
+                barThickness: "flex",
+                categoryPercentage: 1.0,
+                barPercentage: 0.9,
+            })
+        });
+        console.log(data);
+        setDataSets(data);        
+    }, [healthWard, setDataSets]);
+
+    const dataLabel = (ward) => {
+        return ward.name;
+    }
+
+    const graphLabel = () => {
         return dataChoice === null ? t('formUI.dataOption1') : dataChoice.label;
     }
     
@@ -23,16 +48,17 @@ const GraphUI = ( { healthWard, dataChoice } ) => {
         return day + "/" + month + "/" + year;
     };
 
-    var dailyRecords = healthWard.dailyRecords;
-
     const labels = () => {
-            const dates = dailyRecords.map(dailyRecord => { 
-                return toString(dailyRecord.date)
-            });
-            return dates;
-    };
+        console.log(healthWard);
+        console.log(healthWard.values());
+        console.log(first);
+        return first.dailyRecords.map(dailyRecord => { 
+            return toString(dailyRecord.date)
+        });
+    }
 
-    const figures = () => { 
+    var figures = (ward) => {
+        const dailyRecords = ward.dailyRecords; 
         if (dataChoice === null) {
             return dailyRecords.map(dailyRecord => dailyRecord.twoWeekRate);
         }
@@ -40,11 +66,7 @@ const GraphUI = ( { healthWard, dataChoice } ) => {
             case "twoWeekRate":
                 return dailyRecords.map(dailyRecord => dailyRecord.twoWeekRate);
             case "totalCases":
-                return dailyRecords.map(dailyRecord => dailyRecord.totalCases);
-            case "twoWeekCases":
-                return dailyRecords.map(dailyRecord => dailyRecord.twoWeekCases);
-            case "totalRate":
-                return dailyRecords.map(dailyRecord => dailyRecord.totalRate);    
+                return dailyRecords.map(dailyRecord => dailyRecord.totalCases);   
             default:
                 return dailyRecords.map(dailyRecord => dailyRecord.twoWeekRate);
 
@@ -52,23 +74,16 @@ const GraphUI = ( { healthWard, dataChoice } ) => {
         
     };
 
-
     var data = {
         labels: labels(),
-        datasets: [{
-            label:  dataLabel(),
-            backgroundColor: "rgba(51, 129, 255, 0.5)",
-            hoverBackgroundColor: "rgba(51, 129, 255, 1)",
-            data: figures(),
-            barThickness: "flex",
-            categoryPercentage: 1.0,
-            barPercentage: 0.9,
-        }]
+        datasets: dataSets
     };
-
-    
     
     var options = {
+        title: {
+            display: true,
+            text: graphLabel()
+        },
         locale: t('locale'),
         maintainAspectRatio: true,
         responsive: true,
@@ -99,10 +114,12 @@ const GraphUI = ( { healthWard, dataChoice } ) => {
     return (
         <>
             <Container fluid="md" className="mb-2">
+                {healthWard.size === 1 ? 
                 <GraphInfo 
-                    healthWard={healthWard}
-                    lastUpdated={toString(healthWard.lastUpdated)} 
+                    healthWard={first}
+                    lastUpdated={toString(first.lastUpdated)} 
                 />
+                : null }
                 <Bar
                     data={data}
                     options={options}

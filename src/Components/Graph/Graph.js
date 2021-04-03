@@ -6,22 +6,25 @@ import TurnDevice from '../TurnDevice.js';
 import DeviceOrientation, { Orientation } from 'react-screen-orientation';
 
 
-const Graph = ( { geoCode, dataChoice } ) => {
+const Graph = ( { geoCodes, dataChoice } ) => {
     const [healthWard, setHealthWard] = useState(null);
     
 
     const url = 'https://api.covidradarmadrid.es/api/geocode/';
 
     useEffect(() => {
-        const getData = (geoCode) => {
-            axios.get(url.concat(geoCode))
-                .then( response => {
-                    setHealthWard(response.data);
+        const getData = (geoCodes) => {
+            var map = new Map();
+            geoCodes.forEach(geoCode => axios.get(url.concat(geoCode))
+                .then(response => {
+                    map.set(response.data.name, response.data);
                 })
                 .catch( error => console.error(`Error: ${error}`))
-            };
-            getData(geoCode);
-    }, [geoCode]);
+            );
+            setHealthWard(map);
+        };
+        getData(geoCodes);
+    }, [geoCodes, healthWard]);
 
         return (
             <>

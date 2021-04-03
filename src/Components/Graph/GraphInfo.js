@@ -5,7 +5,7 @@ import 'moment/locale/es';
 import { useTranslation } from 'react-i18next';
 
 const GraphInfo = ( healthWard ) => {
-    const { name, totalCases, lastUpdated, dailyRecords, recordCount} = healthWard.healthWard;
+    const { name, totalCases, lastUpdated, dailyRecords, recordCount} = healthWard.healthWard[0];
     const { t } = useTranslation();
 
     var actualCases = dailyRecords[recordCount - 1].twoWeekCases;

@@ -3,11 +3,9 @@ import { React, useState, useEffect } from 'react';
 import FormUI from './FormUI.js';
 import Graph from '../Graph/Graph.js';
 
-
-
 const Form = () => {
     const [options, setOptions] = useState([]);
-    const [geoCode, setGeoCode] = useState(null);
+    const [geoCodes, setGeoCodes] = useState(null);
     const [dataType, setDataType] = useState(null);
 
 
@@ -37,7 +35,7 @@ const Form = () => {
     }
 
     const getGeoCode = (selected) => {
-        setGeoCode(selected);
+        setGeoCodes(selected);
     }
 
 
@@ -48,9 +46,9 @@ const Form = () => {
             passUpDataType={getDataType} 
             options={options} 
         />
-        { geoCode !== null ?
+        { geoCodes !== null ?
             <Graph 
-                geoCode={geoCode} 
+                geoCodes={geoCodes} 
                 dataChoice={dataType}
             /> 
         : null }
