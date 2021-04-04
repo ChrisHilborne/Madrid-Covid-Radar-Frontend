@@ -14,16 +14,17 @@ const Graph = ( { geoCodes, dataChoice } ) => {
 
     useEffect(() => {
         const getData = (geoCodes) => {
-            var map = new Map();
-            geoCodes.forEach(geoCode => axios.get(url.concat(geoCode))
-                .then(response => {
-                    map.set(response.data.name, response.data);
-                })
-                .catch( error => console.error(`Error: ${error}`))
-            );
-            setHealthWard(map);
-        };
+            var geoData = new Map();
+            Promise.all(geoCodes.map(geoCode => {
+                return axios.get(url.concat(geoCode))
+                    .then(response => geoData.set(response.data.name, response.data))
+            })).then(() => {
+                console.log(geoData);
+                setHealthWard(geoData)
+            });
+        }
         getData(geoCodes);
+        console.log(healthWard);
     }, [geoCodes, healthWard]);
 
         return (
