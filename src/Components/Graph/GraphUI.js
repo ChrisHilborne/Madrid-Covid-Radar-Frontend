@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { React } from 'react';
 import { Bar } from "react-chartjs-2";
 import { Container } from 'react-bootstrap'; 
 import GraphInfo from './GraphInfo.js';
@@ -7,25 +7,25 @@ import { useTranslation } from 'react-i18next';
 const GraphUI = ( { healthWard, dataChoice } ) => {
     const { t } = useTranslation();
 
-    const healthWards = Array.from(healthWard.values());
+    const healthWards = Array.from(healthWard.values()); 
     const first = healthWards[0];
 
     const graphLabel = () => {
         return dataChoice === null ? t('formUI.dataOption1') : dataChoice.label;
     };
 
-    const dataLabel = (ward) => {
+    function dataLabel(ward) {
         return ward.name;
-    }
+    };
 
     const labels = () => {
         console.log(first);
         return first.dailyRecords.map(dailyRecord => { 
             return toString(dailyRecord.date)
         });
-    }
+    };
 
-    const figures = (ward) => {
+    function figures(ward) {
         const dailyRecords = ward.dailyRecords; 
         if (dataChoice === null) {
             return dailyRecords.map(dailyRecord => dailyRecord.twoWeekRate);
@@ -39,28 +39,24 @@ const GraphUI = ( { healthWard, dataChoice } ) => {
                 return dailyRecords.map(dailyRecord => dailyRecord.twoWeekRate);
 
         }  
-    };
+    }; 
 
-    const dataSets = () => {
+    function graphData() {
         const data = []; 
-        healthWards.forEach(ward => {
-            const dataLabel = dataLabel(ward);
-            const figures = figures(ward); 
+        healthWards.forEach(ward => { 
             data.push({
-                label: dataLabel,
+                label: dataLabel(ward),
                 backgroundColor: "rgba(51, 129, 255, 0.5)",
                 hoverBackgroundColor: "rgba(51, 129, 255, 1)",
-                data: figures,
+                data: figures(ward),
                 barThickness: "flex",
                 categoryPercentage: 1.0,
                 barPercentage: 0.9,
             })
         });
         return data;
-    }     
+    }
 
-
-    
     const toString = (date) => {
         const year = date[0];
         var month = date[1].toString();
@@ -74,7 +70,7 @@ const GraphUI = ( { healthWard, dataChoice } ) => {
 
     var data = {
         labels: labels(),
-        datasets: dataSets
+        datasets: graphData(),
     };
     
     var options = {
