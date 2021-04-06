@@ -11,7 +11,6 @@ import Footer from "./Components/Footer";
 import LoadingSpinner from "./Components/LoadingSpinner";
 import CookieWarning from "./Components/Cookies/CookieWarning";
 
-
 // router
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
