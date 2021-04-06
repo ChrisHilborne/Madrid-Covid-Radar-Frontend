@@ -5,7 +5,7 @@ import Graph from '../Graph/Graph.js';
 
 const Form = () => {
     const [options, setOptions] = useState([]);
-    const [geoCodes, setGeoCodes] = useState(null);
+    const [geoCodes, setGeoCodes] = useState([]);
     const [dataType, setDataType] = useState(null);
 
 
@@ -46,7 +46,7 @@ const Form = () => {
             passUpDataType={getDataType} 
             options={options} 
         />
-        { geoCodes !== null ?
+        { geoCodes.length > 0 ?
             <Graph 
                 geoCodes={geoCodes} 
                 dataChoice={dataType}

@@ -7,33 +7,31 @@ import DeviceOrientation, { Orientation } from 'react-screen-orientation';
 
 
 const Graph = ( { geoCodes, dataChoice } ) => {
-    const [healthWard, setHealthWard] = useState(null);
+    const [healthWard, setHealthWard] = useState([]);
     
 
     const url = 'https://api.covidradarmadrid.es/api/geocode/';
 
     useEffect(() => {
-        const getData = (geoCodes) => {
-            var geoData = new Map();
+        const getData = () => {
+            var geoData = [];
             Promise.all(geoCodes.map(geoCode => {
                 return axios.get(url.concat(geoCode))
-                    .then(response => geoData.set(response.data.name, response.data))
+                    .then(response => geoData.push(response.data))
             })).then(() => {
-                console.log(geoData);
-                setHealthWard(geoData)
+                setHealthWard(geoData);
             });
         }
-        getData(geoCodes);
-        console.log(healthWard);
-    }, [geoCodes, healthWard]);
+        getData();
+    }, [geoCodes]);
 
         return (
             <>
             <DeviceOrientation>
                 <Orientation orientation="landscape" alwaysRender={false}>
-                {healthWard !== null ?
+                {healthWard.length > 0 ?
                     <GraphUI 
-                        healthWard={healthWard} 
+                        healthWards={healthWard} 
                         dataChoice={dataChoice}
                     /> 
                     : 

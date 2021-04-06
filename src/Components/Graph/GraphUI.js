@@ -1,22 +1,51 @@
-import { React } from 'react';
+import { React, useState } from 'react';
 import { Bar } from "react-chartjs-2";
 import { Container } from 'react-bootstrap'; 
 import GraphInfo from './GraphInfo.js';
 import { useTranslation } from 'react-i18next';
 
-const GraphUI = ( { healthWard, dataChoice } ) => {
+const GraphUI = ( { healthWards, dataChoice } ) => {
     const { t } = useTranslation();
 
-    const healthWards = Array.from(healthWard.values()); 
+    
     const first = healthWards[0];
 
     const graphLabel = () => {
         return dataChoice === null ? t('formUI.dataOption1') : dataChoice.label;
     };
 
-    function dataLabel(ward) {
+    const dataLabel = (ward) => {
         return ward.name;
     };
+
+    const backgroundColor = (count) => {
+        switch (count % 5) {
+            case (1):
+                return "rgba(51, 129, 255, 0.5)";
+            case (2):
+                return "rgba(61, 13, 133, 0.5)";
+            case (3):
+                return "rgba(6, 40, 94, 0.5)";
+            default: 
+                return "rgba(111, 15, 214, 0.5)";
+
+        }
+    };
+
+    const hoverBackgroundColor = (count) => {
+        console.log(count % 5);
+        switch (count % 5) {
+            case (1):
+                return "rgba(51, 129, 255, 1)";
+            case (2):
+                return "rgba(61, 13, 133, 1)";
+            case (3):
+                return "rgba(6, 40, 94, 1)";
+            default: 
+                return "rgba(111, 15, 214, 1)";
+
+        }
+    }
 
     const labels = () => {
         console.log(first);
@@ -25,7 +54,7 @@ const GraphUI = ( { healthWard, dataChoice } ) => {
         });
     };
 
-    function figures(ward) {
+    const figures = (ward) => {
         const dailyRecords = ward.dailyRecords; 
         if (dataChoice === null) {
             return dailyRecords.map(dailyRecord => dailyRecord.twoWeekRate);
@@ -41,20 +70,24 @@ const GraphUI = ( { healthWard, dataChoice } ) => {
         }  
     }; 
 
-    function graphData() {
+    const graphData = () => {
         const data = []; 
-        healthWards.forEach(ward => { 
+        let count = 0;
+        const sorted = healthWards.sort();
+        sorted.forEach(ward => {
+            count++;
+            console.log("Count = " + count);
             data.push({
                 label: dataLabel(ward),
-                backgroundColor: "rgba(51, 129, 255, 0.5)",
-                hoverBackgroundColor: "rgba(51, 129, 255, 1)",
+                backgroundColor: backgroundColor(count),
+                hoverBackgroundColor: hoverBackgroundColor(count),
                 data: figures(ward),
                 barThickness: "flex",
                 categoryPercentage: 1.0,
                 barPercentage: 0.9,
             })
         });
-        return data;
+        return data.sort();
     }
 
     const toString = (date) => {
@@ -108,7 +141,7 @@ const GraphUI = ( { healthWard, dataChoice } ) => {
     return (
         <>
             <Container fluid="md" className="mb-2">
-                {healthWard.size === 0 ? 
+                {healthWards.size === 0 ? 
                 <GraphInfo 
                     healthWard={first}
                     lastUpdated={toString(first.lastUpdated)} 
