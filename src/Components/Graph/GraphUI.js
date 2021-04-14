@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { React, useState, useEffect } from 'react';
 import { Bar } from "react-chartjs-2";
 import { Container } from 'react-bootstrap'; 
 import GraphInfo from './GraphInfo.js';
@@ -6,8 +6,17 @@ import { useTranslation } from 'react-i18next';
 
 const GraphUI = ( { healthWards, dataChoice } ) => {
     const { t } = useTranslation();
+    const [showInfo, setShowInfo] = useState(false);
 
-    
+    useEffect(() => {
+        if (healthWards.length === 1) {
+            setShowInfo(true);
+        }
+        else {
+            setShowInfo(false);
+        }
+    }, [healthWards])
+
     const first = healthWards[0];
 
     const graphLabel = () => {
@@ -33,7 +42,6 @@ const GraphUI = ( { healthWards, dataChoice } ) => {
     };
 
     const hoverBackgroundColor = (count) => {
-        console.log(count % 5);
         switch (count % 5) {
             case (1):
                 return "rgba(51, 129, 255, 1)";
@@ -48,6 +56,7 @@ const GraphUI = ( { healthWards, dataChoice } ) => {
     }
 
     const labels = () => {
+        console.log("first:");
         console.log(first);
         return first.dailyRecords.map(dailyRecord => { 
             return toString(dailyRecord.date)
@@ -76,7 +85,6 @@ const GraphUI = ( { healthWards, dataChoice } ) => {
         const sorted = healthWards.sort();
         sorted.forEach(ward => {
             count++;
-            console.log("Count = " + count);
             data.push({
                 label: dataLabel(ward),
                 backgroundColor: backgroundColor(count),
@@ -135,16 +143,13 @@ const GraphUI = ( { healthWards, dataChoice } ) => {
         }
     };
     
-
-
-
     return (
         <>
             <Container fluid="md" className="mb-2">
-                {healthWards.size === 0 ? 
+                {showInfo ? 
                 <GraphInfo 
                     healthWard={first}
-                    lastUpdated={toString(first.lastUpdated)} 
+                    dailyRecords={first.dailyRecords} 
                 />
                 : null }
                 <Bar
