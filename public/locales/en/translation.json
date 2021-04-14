@@ -2,7 +2,7 @@
     "locale" : "en",
 
     "formUI" : {
-            "healthWard": "Health Ward",
+            "healthWard": "Local Health Area",
             "data": "Figures",
             "dataOption1": "Infection Rate per 100,000 people (last two weeks)",
             "dataOption2": "Total Infection Rate per 100,00 people", 
