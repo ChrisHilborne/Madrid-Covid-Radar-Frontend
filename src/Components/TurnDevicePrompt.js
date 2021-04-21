@@ -3,7 +3,7 @@ import turn_device from '../images/turn_device.png'
 import { Container, Row } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
-const TurnDevice = () => {
+const TurnDevicePrompt = () => {
 
     const { t } = useTranslation();
 
@@ -22,4 +22,4 @@ const TurnDevice = () => {
     );
 };
 
-export default TurnDevice
+export default TurnDevicePrompt
