@@ -58,23 +58,23 @@ const GraphUI = ( { healthWards, dataChoice } ) => {
     const labels = () => {
         console.log("first:");
         console.log(first);
-        return first.dailyRecords.map(dailyRecord => { 
-            return toString(dailyRecord.date)
+        return first.weeklyRecords.map(weeklyRecord => { 
+            return toString(weeklyRecord.date)
         });
     };
 
     const figures = (ward) => {
-        const dailyRecords = ward.dailyRecords; 
+        const weeklyRecords = ward.weeklyRecords; 
         if (dataChoice === null) {
-            return dailyRecords.map(dailyRecord => dailyRecord.twoWeekRate);
+            return weeklyRecords.map(weeklyRecord => weeklyRecord.twoWeekRate);
         }
         switch (dataChoice.value) {
             case "twoWeekRate":
-                return dailyRecords.map(dailyRecord => dailyRecord.twoWeekRate);
+                return weeklyRecords.map(weeklyRecord => weeklyRecord.twoWeekRate);
             case "totalCases":
-                return dailyRecords.map(dailyRecord => dailyRecord.totalCases);   
+                return weeklyRecords.map(weeklyRecord => weeklyRecord.totalCases);   
             default:
-                return dailyRecords.map(dailyRecord => dailyRecord.twoWeekRate);
+                return weeklyRecords.map(weeklyRecord => weeklyRecord.twoWeekRate);
 
         }  
     }; 
@@ -149,7 +149,7 @@ const GraphUI = ( { healthWards, dataChoice } ) => {
                 {showInfo ? 
                 <GraphInfo 
                     healthWard={first}
-                    dailyRecords={first.dailyRecords} 
+                    weeklyRecords={first.weeklyRecords} 
                 />
                 : null }
                 <Bar

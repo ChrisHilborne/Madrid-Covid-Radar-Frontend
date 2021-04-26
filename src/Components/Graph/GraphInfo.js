@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 
 const GraphInfo = ( { healthWard } ) => {
     const { t } = useTranslation();
-    const {name, totalCases, recordCount, lastUpdated, dailyRecords } = healthWard;
+    const {name, totalCases, recordCount, lastUpdated, weeklyRecords } = healthWard;
 
     const formatDate = (dateToFormat) => {
         moment.locale(t('locale'));
@@ -24,7 +24,7 @@ const GraphInfo = ( { healthWard } ) => {
                     </Col>
                     <Col sm={6} md={3} xs={6}>
                         <h5>{t('graphInfo.actualCases')}:</h5> 
-                        <h6>{dailyRecords[recordCount - 1].twoWeekCases}</h6>
+                        <h6>{weeklyRecords[recordCount - 1].twoWeekCases}</h6>
                     </Col>
                     <Col sm={6} md={3} xs={6}>
                         <h5>{t('graphInfo.totalCases')}:</h5>
