@@ -12,7 +12,7 @@
 ## General Info
 This is a React.js frontend client that visualises local healthward Covid-19 data for Madrid. 
 
-The data is served by a Java (Spring Boot) REST API - which can be found [here](https://github.com/ChrisHilborne/Madrid-Covid-Radar)
+The data is served by a [Java Spring RESTful API](https://github.com/ChrisHilborne/Madrid-Covid-Radar)
 
 ## Technologies
 * React.js 
