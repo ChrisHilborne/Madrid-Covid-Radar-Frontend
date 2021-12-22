@@ -9,7 +9,7 @@ const Form = () => {
     const [dataType, setDataType] = useState(null);
 
 
-    const urlOptions = 'https://api.covidradarmadrid.es/api/names&geocodes';
+    const urlOptions = 'https://covidradar-madrid.herokuapp.com/api/names&geocodes';
 
     useEffect( () => {
         async function getOptions() {

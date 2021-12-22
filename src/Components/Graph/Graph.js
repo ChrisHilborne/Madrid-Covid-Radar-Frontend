@@ -10,7 +10,7 @@ const Graph = ( { geoCodes, dataChoice } ) => {
     const [healthWard, setHealthWard] = useState([]);
     
 
-    const url = 'https://api.covidradarmadrid.es/api/geocode/';
+    const url = 'https://covidradar-madrid.herokuapp.com/api/geocode/';
 
     useEffect(() => {
         const getData = () => {
